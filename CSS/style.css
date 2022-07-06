@@ -1,0 +1,154 @@
+.emble-css {
+	color: red;
+}
+
+.text-green {
+	/*color: green;
+	color: #2e8b08;*/
+	color: rgba(46, 139, 8, 1);
+}
+
+@font-face {
+	font-family: noto;
+	src: url("./font/NotoSansJP-Medium.otf");
+}
+
+.text-font {
+	font-family: noto;
+	font-size: 50px; /* rem, em, pt: 1rem = 16px; 1em = 16px;  */
+	font-style: italic; /* normal, italic, oblique, initial, inherit */
+	letter-spacing: 1px; /* Giản cách các chữ cái, Mặc định là 1px */
+	line-height: 1; /*Thuộc tính line-height được dùng để định dạng khoảng cách các dòng cho thành phần.*/
+	text-decoration: underline; /* Thuộc tính text-decoration được dùng xác định thành phần có gạch dưới hay không.  overline, line-through, underline */
+	word-spacing: 50px; /* Thuộc tính word-spacing được dùng để định dạng khoảng cách giữa các từ cho thành phần. */
+}
+
+.item {
+	color: green;
+}
+
+.format-common .background {
+	/*background: red;*/
+	color: #ffffff;
+	background-color: red;
+}
+
+.format-common .width {
+	width: 200px;
+}
+
+.format-common .height {
+	height: 200px;
+}
+
+
+.format-common .common {
+	background-color: red;
+	color: white;
+	width: 200px;
+	height: 200px;
+	text-align: center; /* left (mặc định), right, center, justify */
+}
+
+
+.test-padding {
+	background:  black;
+	color: #ffffff;
+	font-size: 30px;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	/*padding: 20px 20px 20px 20px;
+	padding: 20px;
+	padding: 20px 30px;*/
+	padding-top: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+}
+
+.test-margin {
+	background: black;
+	color: #ffffff;
+	font-size: 30px;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	margin: 20px 20px 20px 20px;
+}
+
+.wrap-float {
+	background: black;
+	height: 500px;
+}
+
+.wrap-float .bg-float {
+	background: green;
+	width: 100px;
+	height: 100px;
+}
+
+.wrap-float .bg-float-clear {
+	background: blue;
+	width: 100%;
+	height: 200px;
+	color: #ffffff;
+	clear: both;
+}
+
+.wrap-float .float-left {
+	float: left;
+	margin-right: 20px;
+}
+
+.wrap-float .float-right {
+	float: right;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-inline {
+	display: inline;
+}
+
+.position-relative {
+	background: black;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+}
+
+.position-fixed {
+	background: yellow;
+	width: 300px;
+	height: 300px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+}
+
+.position-absolute {
+	background: yellow;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	right:  0px;
+	z-index: 2;
+}
+
+.position-absolute-1 {
+	background: red;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	z-index: 1;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.test-css {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<section class="learning-body">
+		<div>
+			<p>CSS có 3 cách viết:</p>
+			<p>Cách 1: Viết inline</p>
+			<p>Cách 2: Dùng thẻ style</p>
+			<p>Cách 3: Nhúng từ file ngoài</p>
+		</div>
+		<div>
+			<span style="color:red;">
+	        	Đây là đoạn css inline
+	        </span>
+		</div>
+		
+        <div>
+        	<span class="test-css">
+	        	Đây là đoạn css style trực tiếp trên trang
+	        </span>
+        </div>
+
+        <div>
+        	<span class="emble-css">
+	        	Css bằng cách nhúng file
+	        </span>
+        </div>
+
+        <h2>Các thuộc tính định dạng cho text</h2>
+        <div>
+        	<ul>
+        		<li>color</li>
+        		<li>font-family</li>
+        		<li>font-size</li>
+        		<li>font-style</li>
+        		<li>letter-spacing</li>
+        		<li>line-height</li>
+        		<li>text-decoration</li>
+        		<li>text-transform</li>
+        		<li>word-spacing</li>
+        	</ul>
+        	<h3>Color:</h3>
+        	<span class="text-green">Đây là màu xanh</span>
+        	<h3>Font family:</h3>
+        	<span class="text-font">Text font</span>
+        </div>
+
+        <h2>Các thuộc tính định dạng chung</h2>
+        <ul>
+        	<li class="item">Background</li>
+        	<li class="item">Border</li>
+        	<li class="item">Height</li>
+        	<li class="item">Width</li>
+        	<li class="item">Text-align</li>
+        </ul>
+        <div class="format-common">
+        	<span class="background">backgound màu đỏ</span>
+        	<div class="background width">Set width</div>
+        	<div class="background height">Set height</div>
+        	<br>
+        	<div class="common">Đây là common test các thuộc tính định dạng chung</div>
+        </div>
+        <h2>Các thuộc tính điều khiển nội dung</h2>
+        <div>
+        	<ul>
+        		<li>padding</li>
+        		<li>margin</li>
+        		<li>float</li>
+        		<li>clear</li>
+        		<li>display</li>
+        		<li>position</li>
+        	</ul>
+        	<p>Padding: Thuộc tính padding khi sử dụng sẽ thêm khoảng không gian bên trong thành phần, khoảng không gian này sẽ được cộng dồn thêm vào chiều rộng hoặc chiều cao của thành phần (tùy vào hướng sử dụng padding).</p>
+        	<p>Padding có 4 thuộc tính: top, right, bottom, left</p>
+        	<div class="test-padding">
+        		Đây là chữ bên trong padding
+        	</div>
+
+
+        	<p>Margin: Thuộc tính margin khi sử dụng sẽ thêm khoảng không gian bên ngoài thành phần, khoảng không gian này không cộng dồn thêm vào chiều rộng hoặc chiều cao của thành phần.</p>
+        	<p>Margin có 4 thuộc tính: top, right, bottom, left</p>
+        	<div class="test-margin">
+        		Đây là chữ bên trong margin
+        	</div>
+
+        	<p>Float: Thuộc tính float: xác định sự trôi nổi của thành phần.</p>
+        	<div class="wrap-float">
+        		<p class="bg-float float-left">
+        			
+        		</p>
+        		<p class="bg-float float-right">
+        			
+        		</p>
+        		<div class="bg-float-clear clear">
+        			Clear: ngăn chặn thành phần A chiếm vùng không gian của thành phần B (với thành phần B là thành phần sử dụng float). <br>
+        			Clear có 3 thuộc tính: <br>
+        			<ul>
+        				<li>clear:left => ngăn chặn thành phần B chiếm chỗ thành phần A, khi thành phần A có sử dụng float: left;.</li>
+        				<li>clear:right => ngăn chặn thành phần B chiếm chỗ thành phần A, khi thành phần A có sử dụng float: right;.</li>
+        				<li>clear:both => ngăn chặn thành phần B chiếm chỗ thành phần A, khi thành phần A có sử dụng float left hoặc right.</li>
+        			</ul>
+        		</div>
+        	</div>
+
+        	<p>Display</p>
+        	<p>Display có 3 thuộc tính: inline, block, none</p>
+        	<div>
+        		<span class="display-block">Test inline</span>
+        		<p class="display-inline">Test block</p>
+        	</div>
+
+
+        	<p>Position</p>
+        	<p>Display có 4 thuộc tính: relative, absolute, fixed, static</p>
+        	<div class="wrap-position">
+        		<div class="position-relative">
+        			<div class="position-absolute">
+	        			
+	        		</div>
+	        		<div class="position-absolute-1">
+	        			
+	        		</div>
+        		</div>
+        		<div class="position-fixed">
+        			
+        		</div>
+        	</div>
+        </div>
+	</section>
+</body>
+</html>
