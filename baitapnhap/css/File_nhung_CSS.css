@@ -1,0 +1,176 @@
+.child1:first-child {
+	color: red;
+	font-size: 20px;
+}
+.child1:last-child {
+	color: blue;
+	font-size: 30px;
+}
+.child1:nth-child(2) {
+	color: green;
+	font-size: 30px;
+}
+.border-radius {
+	background: #70cbce;
+	color: white;
+	border: 5px solid #70cbce;
+	border-radius: 5px;
+	padding: 10px 30px;
+	text-decoration: overline;
+	text-decoration: none;
+}
+.box-shadow {
+	border: 2px solid red;
+	height: 300px;
+	width: 300px;
+	background: red;
+	box-shadow: 30px 49px 21px 5px rgba(255,89,180,0.8);
+	opacity: 0.5;
+}
+.text-shadow {
+	color: #4576FF;
+	font-size: 40px;
+	margin: 70px;
+	text-shadow: 11px 4px 8px rgba(206,89,55,0.73);
+	opacity: 0.7;
+}
+.transparence {
+	width:100px;
+	height:100px;
+	background: rgba(10, 50 ,100 , 0.5);
+}
+.background-size {
+	background: url(../images/baitap4.png) no-repeat;
+	border: 1px solid #000099;
+    height: 300px;
+    width: 500px;
+	background-size: cover;
+	margin-top: 30px;
+}
+.background-gradient {
+	width: 200px;
+	height: 200px;
+	background-image: linear-gradient(blue 10%, red 80%)
+}
+.background-gradient-radial {
+	height: 200px;
+    width: 400px;
+	background-image: radial-gradient(at center top, #476CFF 20%, #FFEF5C 50%, #666 80%) /*repeating-radial-gradient(#476CFF 40%, #FFEF5C 60%);*/
+}
+.transition-wrap{
+	width: 100%;
+	height: 500px;
+	border: 2px solid black;
+}
+.transition {
+	background: #442523;
+	height: 100px;
+	width: 100px;
+	transition: all 5s;
+}
+.transition:hover {
+	background-color: red;
+	width: 1000px;
+	height: 300px;
+}
+.wrapper-flex {
+	height: 500px;
+	width: 100%;
+	border: 2px solid black; 
+	margin-top: 30px;
+}
+.grid-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+.grid-box .box {
+	width: 100px;
+	height: 100px;
+	background: yellow;
+	margin-right:5px;
+	margin-bottom: 5px;
+}
+/*
+.box-1 {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+*/
+.wrap-animation {
+    width: 100%;
+    height: 500px;
+    position: relative;
+	margin-top: 30px;
+    margin-bottom: 50px;
+	border: 2px solid black;
+}
+.animation {
+	margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    position: absolute;
+    animation: abc 6s infinite alternate;
+	text-align: center;
+}
+@keyframes rotateFrames {
+	from {
+		left: 0%;
+		height: 30px;
+		line-height: 30px;
+	}
+	to {
+		left: calc(100% - 200px);
+		height: 300px;
+		line-height: 100px;
+	}
+}
+@keyframes abc {
+	 0% {
+        background-color: #73BEFF;
+        left: 0;
+        top: 0;
+    }
+    30% {
+        background-color: #FFFF00;
+        left: 300px;
+        top: 100px;
+        transform: rotate(0deg);
+    }
+    60% {
+        background-color: #FF0000;
+        left: 700px;
+        top: 0;
+        transform: rotate(-3600deg);
+    }
+    100% {
+        background-color: #BC70FF;
+        left: 300px;
+        top: 100px;
+        transform: rotate(3600deg);
+    }
+}
+div {
+    border: 1px solid red;
+    height: 200px;
+    margin: 40px 40px;
+	position: raletive;
+}
+
+.tagA {
+    background: #f3f3cf;
+    height: 30px;
+    width: 150px;
+	position: absolute;
+	left: 20px;
+	right: 20px; 	
+}
+
+.tagB {
+    background: #e0e0fc;
+    height: 30px;
+    width: 150px;
+}

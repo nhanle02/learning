@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test lại CSS</title>
+	<style>
+		@font-face {
+			font-family: abc;
+			src: url("./font/NotoSansJP-Medium.otf")
+		}
+		.text{
+			background: yellow;
+			width: 300px;
+			height: 200px;
+			font-size: 35px;
+			text-align: center;
+			margin: 25px;
+			padding: 20px;
+			clear: both;
+		}
+		.text1 {
+			background: Green;
+			width: 500px;
+			height: 150px;
+			font-family: abc;
+			font-size: 30px;
+			font-style: inherit;
+			line-height: 1;
+			letter-spacing: 1px;
+			text-decoration: underline;
+			word-spacing: 3px;
+			text-align: center;
+			color: #d80fe5f2;
+			padding: 100px 50px 50px 50px;
+			margin: 20px;
+		}
+		.wrap-float {
+			background: black;
+			color: #ffffff;
+			width: 500px;
+			height:500px;
+		}
+		.first {
+			background: #f3f3cf;
+			height: 100px;
+			float: left;
+			width: 100px;
+			margin: 10px;
+		}
+
+		.second {
+			background: #e0e0fc;
+			height: 100px;
+			width: 100px;
+			float: left;
+			margin: 10px;
+		}
+		.position-relative {
+			background: black;
+			width: 300px;
+			height: 300px;
+			position: relative;
+			top: 10px;
+			right: 10px;
+			bottom: 10px;
+			left: 10px;
+		}
+		.position-fixed {
+			background: yellow;
+			width: 300px;
+			height: 300px;
+			position: fixed;
+			bottom: 0px;
+			right: 0px;
+		}
+		.position-absolute {
+			background: yellow;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			z-index: 2;
+			top: 10px;
+			right: 10px;
+			
+		}
+		.position-absolute-1 {
+			background: red;
+			width: 120px;
+			height: 120px;
+			position: absolute;
+			bottom: 10px;
+			left:10px;
+		}
+	</style>
+</head>
+<body>
+	<section class="test_learning">
+		<div>
+			<p class="text">đây cũng là <span>dòng test<span> cho vui</p>
+			<p class="text1">đây là dòng chữ để test các chức năng của css</p>
+		</div>
+		<div class="wrap-float">
+			<p class="first">Thành phần A.</p>
+			<p class="second">Thành phần B.</p>
+		</div>
+		<div class="wrap-position">
+			<div class="position-relative">
+				<div class="position-absolute">
+					
+				</div>
+				<div class="position-absolute-1">
+					
+				</div>
+			</div>
+			<div class="position-fixed">
+				
+			</div>
+       </div>
+	   <p>alo alo alo</p>
+	</section>
+</body>
+</html>
