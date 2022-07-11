@@ -4,33 +4,84 @@ body {
     font-size: 15px;
     line-height: 1.8;
 }
+
 .baitape {
 	margin: 30px auto;
     width: 1145px;
 }
-ul {
-	list-style: none;
-	margin: 0;
+
+.baitape .title {
+	color: #1F1F1F;
+	font-size: 35px;
+	line-height: 35px;
+	margin-bottom: 35px;
 }
-.border1 {
-	float:left;
-	width: 460px;
+
+.baitape .description {
+	color: #A9AAAA;
+	font-size: 18px;
+	line-height: 25px;
+	margin-top: 0;
+	margin-bottom: 60px;
 }
-.border2 {
-	float: right;
-	width: 650px;
+
+.wrap-box {
+	display: flex;
 }
-.list li {
-	border-bottom: 2px;
+
+.wrap-box .box-left {
+	margin-right: 30px;
 }
-.list li img {
-	float: left;
-	width: 100px;
+
+.wrap-box .box-left img {
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.wrap-box .box-left .title {
+	margin-top: 0;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 30px;
+	color: #1F1F1F;
+}
+
+.wrap-box .box-left .content {
+	color: #999999;
+    font-size: 16px;
+}
+
+.list .item {
+	border-bottom: 1px dashed #F44336;
+	margin-bottom: 18px;
+	padding-bottom: 20px;
+	display: flex;
+}
+
+.list .item:last-child {
+	border: none;
+}
+
+.list .item .image {
+	height: 100px;
+    width: 100px;
+	margin-right: 30px;
+}
+
+.list .item .image img {
+	height: 100px;
+    width: 100px;
 	border-radius: 4px;
 }
-.list li div {
-	float: right;
-	width: 480px;
-	margin-left: 20px;
-	line-height: -10px;
+
+.list .item .content h3 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #1F1F1F;
+	font-size: 16px;
+    line-height: 16px;
+}
+
+.list .item .content p {
+	margin: 0;
 }

@@ -1,0 +1,53 @@
+.wrapper {
+    max-width: 1045px;
+    margin: auto;
+}
+
+.wrapper .title-comment {
+    color: #191919;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 45px;
+}
+
+.comments .list-comment .item-comment {
+    background-color: #fbfbfb;
+    padding: 20px 0 30px 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.comments .list-comment .item-comment .author {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #434343;
+}
+
+.comments .list-comment .item-comment .author .name {
+    color: #afc130;
+    text-transform: capitalize;
+}
+
+.comments .list-comment .item-comment .date {
+    color: #191919;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.comments .list-comment .item-comment .content {
+    color: #191919;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.comments .list-comment .item-comment img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
