@@ -1,0 +1,63 @@
+- khi xếp khối sử dụng display: flex hoặc float: left  
++ với display: flex display là flex và inline-flex, giúp sắp xếp, bố cục các thành phần khối (block) 
+một cách dễ dàng, linh hoạt hơn trước.
+
+
+- Trong <form> bắt buộc phải có tham số action.
+<form action=""></form>
+
+Một <form> có thể chứa thành phần <input /> như trường text, checkbox, radio-button, button submit,...
+Một <form> cũng có thể chứa thành phần <select>, <textarea>, <fieldset>, <legend> và <label>.
++ khi sử dụng select là để chọn 1 danh sách sổ xuống
+	<select>
+	<option>Danh sách 01</option>
+	<option>Danh sách 02</option>
+	<option>Danh sách 03</option>
+	<option>Danh sách 03</option>
+	</select>
+
+- <textarea rows="1" cols="1" placeholder="* Enter message here..."></textarea>
+
+- position: relative
+  position: absolute
+  position: fixed
+  position: static
++ Thuộc tính position: relative; định vị trí tương đối cho thành phần, khi sử dụng thuộc tính này 
+thành phần sẽ định vị trí theo mốc vùng hiển thị của chính nó, vị trí này không phụ thuộc vào vùng 
+không gian, vùng không gian vẫn được giữ như ban đầu.
+ 	① : gốc cho thuộc tính top.
+	② : gốc cho thuộc tính right.
+	③ : gốc cho thuộc tính bottom.
+	④ : gốc cho thuộc tính left.
++ Thuộc tính position: absolute; định vị trí tuyệt đối cho thành phần, khi sử dụng thuộc tính này 
+vùng không gian của thành phần sẽ biến mất (trở thành vùng trống), thành phần sẽ thoát khỏi vùng 
+không gian của nó, gốc của thành phần lúc này sẽ được tính theo các tính chất sau: Ta thấy Thành phần A 
+lúc này vẫn nằm ở vị trí như ban đầu, tuy nhiên vùng không gian của nó đã được giải phóng, và Thành phần A 
+đã thoát khỏi vùng không gian của nó, chính vì vậy mà Thành phần B đã chiếm chỗ của Thành phần A, hiện giờ 
+Thành phần B đang nằm bên dưới Thành phần A, thử tăng chiều rộng của Thành phần B ta sẽ thấy được điều đó.
++ 
+
+
+- border-bottom: 1px dashed #F44336;
+
+- code sử dụng clearfix:
+.wrapper .content .box-1 .title {
+	margin-top: 0;
+	color: #333333;
+	font-size: 26px;
+	line-height: 26px;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.wrapper .content .box-1 .title:after {
+	content: "";
+	background-color: #516cfe;
+	display: block;
+	width: 60px;
+	height: 3px;
+	left: 0;
+	bottom: -6px;
+	position: absolute;
+}
+

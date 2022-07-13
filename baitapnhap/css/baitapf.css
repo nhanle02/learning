@@ -1,0 +1,107 @@
+body {
+	width: 1069px;
+    height: 852px;
+	padding: 0;
+	margin: 60px auto;
+}
+
+.wrapper {
+	
+}
+
+.wrapper .title {
+	text-align: center;
+}
+
+.wrapper .title h2 {
+	color: #1F1F1F;
+	font-size: 32px;
+	line-height: 20px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.wrapper .title p {
+	margin-top: 0;
+	font-size:18px;
+	line-height: 22px;
+	color: #9D9D9D;
+	margin-bottom: 70px;
+}
+
+.wrapper .form {
+	background-color: #F2F3F5;
+	width: 950px;
+	height: 592px;
+	margin: 0 auto;
+	box-shadow: 8px 7px 6px 3px #f2f3ed;
+}
+
+.wrapper .form .f .f1 {
+	width: 375px;
+    height: 10px;
+	margin-top: 40px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .f2 {
+	width: 375px;
+    height: 10px;
+	margin-top: 40px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .f3 {
+	width: 375px;
+    height: 10px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .f4{
+	width: 375px;
+    height: 10px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .list1 {
+    width: 429px;
+    height: 55px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .list2 {
+    width: 429px;
+    height: 55px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .text {
+    width: 840px;
+    height: 120px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+	padding: 20px 25px;
+}
+
+.wrapper .form .f .f5{
+	background-color: #2D3032;
+	color: white;
+	border-radius: 4px;
+	font-size: 18px;
+	width: 890px;
+	height: 50px;
+	margin-left: 30px;
+	margin-bottom: 45px;
+}
