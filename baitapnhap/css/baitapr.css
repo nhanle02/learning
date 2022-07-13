@@ -52,3 +52,27 @@
 	font-size: 16px;
 	margin-bottom: 0px;
 }
+
+@media only screen and (max-width: 1024px) {
+	.wrapper .content {
+		flex-direction: row;
+	}
+
+	.wrapper .content .item {
+		width: 50%;
+		margin: 0;
+	}
+	
+}
+
+@media only screen and (max-width: 991px) {
+	.wrapper .content {
+		flex-direction: column;
+	}
+
+	.wrapper .content .item {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
