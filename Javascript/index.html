@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>Hoc javascript</title>
+    <style>
+        .item {
+            background-color: green;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <!-- <a href="#" onmouseover="return alert('123456')">Test javascript </a> -->
+    </section>
+
+    <section>
+        <div class="wrapper">
+            <p class="item" id="item" data-a="Data attribute">This is test DOM</p>
+            <!-- <p class="item" id="item"></p> -->
+
+            <form action="" method="GET">
+                <input type="text" id="item-input" class="item-input" value="Nghia dai loc" />
+                <a href="#" onclick="myFunction()" class="click-get">Get</a>
+            </form>
+        </div>
+    </section>
+    <script type="text/javascript">
+        // document.write("Hello javascript!!!");
+        console.log("This is test console.log!!!");
+        function showAlert () {
+            alert("Hello Javascript 1!!!");
+            let bien1 = "Bien 1";
+
+            let __bien1;
+            let $bien1;
+        }
+
+        // showAlert();
+
+        let bien1 = "Bien 1";
+        var bien2;
+        const hang1 = "Hang 1";
+
+        let noi = bien1 + ' ' + hang1;
+        // alert(noi);
+
+        var a = 'Xin chao';
+        a += ' Ban nhe!';
+        // alert(a);
+
+        let a1 = 5;
+        let a2 = "5";
+        let b = (a1 != a2);
+        let c = (a1 !== a2);
+        // alert(c);
+
+        // var i = 1;
+        // while (i < 10) {
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // for (let i = 0; i < 10; i++) {
+        //     if (i === 5) {
+        //         // break;
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+
+        // do {
+        //     console.log(i);
+        //     i++;
+        // } while (i < 10)
+        
+        let key = 3;
+        
+        switch (key) {
+            case 1:
+                console.log('Truong hop 1');
+                break;
+            case 2:
+                console.log('Truong hop 2');
+                break;
+            case 3:
+                console.log('Truong hop 3');
+                break;
+            default:
+                console.log('Khong co truong hop nao');
+                break;
+        }
+
+        function count(giatri1, giatri2) {
+            console.log(giatri1 + giatri2);
+        }
+
+        // count(3, 10);
+
+        var array1 = ['Gia tri 1', 'Gia tri 2', 100];
+        // console.log(array1[0]);
+
+
+        var array2 = new Array();
+        array2['gia_tri_1'] = 'Gia tri 1';
+        console.log(array2['gia_tri_1']);
+
+
+        let string = 'Hello world!!!';
+        let length = string.length;
+        console.log(length);
+
+        let strOf = 'o';
+        let indexOf = string.indexOf(strOf);
+        console.log(indexOf);
+
+        let lastIndexOf = string.lastIndexOf(strOf);
+        console.log(lastIndexOf);
+
+        let search = string.search(strOf);
+        console.log(search);
+
+        let slice = string.slice(1, 3);
+        console.log(slice);
+
+        let subString = string.substring(1, 3);
+        console.log(subString);
+
+        let substr = string.substr(1, 3);
+        console.log(substr);
+
+        let str2 = 'l';
+        let str3 = 'Nhan';
+        let replace = string.replace(str2, str3);
+        console.log(replace);
+
+
+        let concat = string.concat(str3, str2, ' Abc');
+        console.log(concat);
+
+
+        let charAt = string.charAt(4);
+        console.log(charAt);
+
+        let charCodeAt = string.charCodeAt(4);
+        console.log(charCodeAt);
+
+        let str4 = "123,321,1232,9483,4343" 
+        let split = str4.split(',');
+        console.log(split);
+
+        let num1 = 15;
+        let num2 = 15.123456789;
+        let to_string = num1.toString();
+        console.log(typeof num1 + ' --- ' + typeof to_string);
+
+        let toFixed = num2.toFixed(3);
+        console.log(toFixed);
+
+        let toPrecision = num2.toPrecision(5);
+        console.log(toPrecision);
+
+        console.log(Number(true));
+
+        var elementID = document.getElementById('item');
+        var elementClass = document.getElementsByClassName('item');
+        var elementTag = document.getElementsByTagName('p');
+        var elementSelector = document.querySelector('.item');
+        var elementSelectorAll = document.querySelectorAll('#item');
+        console.log(elementID);
+        console.log(elementClass);
+        console.log(elementTag);
+        console.log(elementSelector);
+        console.log(elementSelectorAll);
+
+        var contentHtml = elementID.innerHTML;
+        console.log(contentHtml);
+
+        var outerHtml = elementID.outerHTML;
+        console.log(outerHtml);
+
+        var attribute = elementID.getAttribute('id');
+        console.log(attribute);
+
+        elementID.setAttribute('data-a', 'Nhan 1234567890');
+
+        elementID.style.color = 'black';
+
+        function myFunction () {
+            var inputElement = document.getElementById('item-input');
+            var valInput = inputElement.value;
+            console.log(valInput);
+        }
+
+        var inputElement = document.querySelector('#item-input');
+        var valInput = inputElement.value;
+        console.log(valInput);
+    </script>
+</body>
+</html>
