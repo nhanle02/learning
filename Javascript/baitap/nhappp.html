@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<title>bài tập 3 thay đổi html</title>
+	</head>
+	<body>
+		<section class="wrapper">
+			<div>
+				<input type="text" class="item" id="1"  name="item" value="alobantre" placeholder="nhap"/>
+				<input type="submit" class="item" name="submit" id="2"  value="click"  />
+				<p class="nhan" id="3">alo alo alo</p>
+			</div>
+		</section>
+		<script type="text/javascript">
+		
+			var elementID = document.getElementById(1);
+			console.log(elementID);
+			
+			var getElementsByTagName = document.getElementsByTagName('input');
+			console.log(getElementsByTagName);
+			
+			var getElementsByClassName = document.getElementsByClassName('item');
+			console.log(getElementsByClassName);
+			
+			var querySelector = document.querySelector('.item');
+			console.log(querySelector);
+		
+			var querySelectorAll = document.querySelectorAll('.item');
+			console.log(querySelectorAll);
+		
+			let string = 'nhan vua dep trai con hoc gioi!!!'
+			let lenght = string.length;
+			console.log(lenght);
+			
+			let str = 'a';
+			let indexOf = string.indexOf(str); <!-- Thứ tự của chuỗi Str2 đầu tiên tìm thấy trong chuỗi Str -->
+			
+			console.log(indexOf);
+			
+			let lastIndexOf = string.lastIndexOf(str); <!-- Thứ tự của chuỗi Str2 cuối cùng được tìm thấy trong chuỗi Str -->
+			console.log(lastIndexOf);	
+			
+			let search = string.search(str);  <!-- Hoạt động giống hàm indexOf -->
+
+			console.log(search);
+			
+			let slice = string.slice(5,12); <!-- Cắt chuỗi con trong chuỗi Str từ vị trí start tới vị trí trước end -->
+			document.write(slice);
+			
+			let substring = string.substring(1,10); <!-- Cắt chuỗi con trong chuỗi Str từ vị trí start tới vị trí trước end -->
+			console.log(substring);
+			
+			let substr = string.substr(1,1); <!-- Cắt chuỗi con trong chuỗi Str từ vị trí start lấy length ký tự -->
+			console.log(substr);
+			
+			str2 = 'nhan';
+			str3 = 'nghia';
+			let replace = string.replace(str2,str3); <!----> <!--Thay thế Str2 đầu tiên tìm thấy trong Str thành Str3 -->
+			console.log(replace);
+			document.write("........................" + string); 
+			
+			let toUpperCase = string.toUpperCase(); <!-- Trả về chuỗi viết hoa toàn bộ của chuỗi Str -->
+			console.log(toUpperCase);
+			
+			let toLowerCase = string.toLowerCase(); <!-- Trả về chuỗi viết thường toàn bộ của chuỗi Str -->
+			console.log(toLowerCase);
+			
+			let concat = '';
+			concat = concat.concat(string, str2, str3); <!-- Trả về kết quả cộng của Str + Str2 + Str3 (Có thể có Str4, 5 ,6) -->
+			console.log(concat);
+			
+			let charAt = string.charAt(5); <!--Trả về ký tự tại vị trí index trong chuỗi Str index la vi tri -->
+			console.log(charAt);
+			
+			let charCodeAt = string.charCodeAt(10); <!----> <!--Trả về mã unicode của ký tự tại vị trí index trong chuỗi Str-->
+			console.log(charCodeAt);
+			
+			let split = string.split(" "); <!--Cắt chuỗi Str thành mảng các chuỗi nhỏ phân biệt bởi Str-->
+			console.log(split); 
+			
+			var Number = 12131.1234564;
+			let toString = Number.toString(); <!--	Đổi kiểu dữ liệu số thành chuỗi -->
+			console.log(toString);
+			
+			let toFixed = Number.toFixed(3); <!--Làm tròn kết quả, lấy N là số sau dấu thập phân. N có thể là 0 -->
+			console.log(toFixed);
+			
+			let toPrecision = Number.toPrecision(10); <!--Đổi thành kiểu chuỗi, lấy N số (có làm tròn). Nếu không có N thì lấy hết -->
+			console.log(toPrecision);
+			
+			var parseInt = parseInt("10,5"); <!--	Đây là hàm toàn cục được định nghĩa có sẵn và dùng để chuyển dữ liệu chuỗi  thành kiểu số nguyên (int). -->
+			console.log(parseInt); 
+			
+			var Float = "1.1 nhan";
+			var parseFloat = parseFloat(Float); <!--	Đây là hàm toàn cục được định nghĩa có sẵn và dùng để chuyển dữ liệu chuỗi  thành kiểu số thực (float). -->
+			console.log(parseFloat);
+			
+			
+			var element = document.getElementById(3);
+			var innerHTML = element.innerHTML;
+			console.log(innerHTML);
+
+			var outerHTML = element.outerHTML;
+			console.log(outerHTML);
+			
+			var getAttribute = elementID.getAttribute('placeholder');
+			console.log(getAttribute);
+			
+			var setAttribute = elementID.setAttribute('id', '10');
+			
+			element.style.color = 'red';
+			
+			var value = elementID.value;
+			console.log(value);
+			
+			
+		</script>
+			
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

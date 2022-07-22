@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 1263px;
+	height: 584px;
+	border: 1px solid #000000;
+}
+
+.wrapper .title h2 {
+	margin-left: 57px;
+	margin-top: 57px;
+	color: #222222;
+	font-size: 26px;
+	line-height: 26px;
+	font-weight: 500;
+	margin-bottom: 0;
+	position: relative;
+	margin-bottom: 57px;
+}
+
+.wrapper .title h2:after {
+	content: "";
+	background-color: #FFB737;
+	display: block;
+	height: 3px;
+	width: 55px;
+	position: absolute;
+	bottom: -18px;
+}
+
+.wrapper .form {
+	display: flex;
+}
+
+.wrapper .form .contact {
+	width: 100%;
+	max-width: 30.8788598575%;
+	margin-left: 57px;
+}
+
+.wrapper .form .contact .info h3 {
+	font-size: 22px;
+	color: #222222;
+	line-height: 22px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+
+.wrapper .form .contact .list ul li {
+	list-style: none;
+	margin-bottom: 40px;
+	font-size: 18px;
+	color: #ACACAC;
+}
+
+.wrapper .form .contact .list ul li i {
+	font-family: "Font Awesome 6 Free";
+	margin-right: 15px;
+}
+
+.wrapper .form .book .h3 {
+	font-size: 22px;
+    color: #222222;
+    line-height: 22px;
+    font-weight: 500;
+	margin-bottom: 40px;
+}
+
+.wrapper .form .book .b1 .block input{
+	width: 730px;
+	height: 12px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	margin-bottom: 14px;
+}
+
+.wrapper .form .book .b1 .block1 textarea {
+	width: 732px;
+	height: 89px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	margin-bottom: 14px;
+}
+
+.wrapper .form .book .b1 .block2 button {
+	background-color: #0CB8B6;
+	border: 1px solid #0CB8B6;
+	padding: 14px 20px;
+	color: #ffffff;
+}
+
+.wrapper .form .book .b1 .block2 button:hover {
+	background-color: #17CCCA;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

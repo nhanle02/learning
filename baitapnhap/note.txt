@@ -61,3 +61,22 @@ Thành phần B đang nằm bên dưới Thành phần A, thử tăng chiều r�
 	position: absolute;
 }
 
+
+
+
+
+
+Str.length	Đếm số ký tự có trong chuỗi
+	Str.indexOf(Str2)	Thứ tự của chuỗi Str2 đầu tiên tìm thấy trong chuỗi Str
+	Str.lastIndexOf(Str2)	Thứ tự của chuỗi Str2 cuối cùng được tìm thấy trong chuỗi Str
+	Str.search(Str2)		Hoạt động giống hàm indexOf
+	Str.slice(start, end)	Cắt chuỗi con trong chuỗi Str từ vị trí start tới vị trí trước end
+	Str.substring(start, end)	Cắt chuỗi con trong chuỗi Str từ vị trí start tới vị trí trước end
+	Str.substr(start, length)	Cắt chuỗi con trong chuỗi Str từ vị trí start lấy length ký tự
+	Str.replace(Str2, Str3)	Thay thế Str2 đầu tiên tìm thấy trong Str thành Str3
+	Str.toUpperCase()	Trả về chuỗi viết hoa toàn bộ của chuỗi Str
+	Str.toLowerCase()	Trả về chuỗi viết thường toàn bộ của chuỗi Str
+	Str.concat(Str2, Str3)	Trả về kết quả cộng của Str + Str2 + Str3 (Có thể có Str4, 5 ,6)
+	Str.charAt(index)	Trả về ký tự tại vị trí index trong chuỗi Str
+	Str.charCodeAt(index)	Trả về mã unicode của ký tự tại vị trí index trong chuỗi Str
+	Str.split(Str2)	Cắt chuỗi Str thành mảng các chuỗi nhỏ phân biệt bởi Str

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>bài tập 5 javascript</title>
+	</head>
+
+	<body>
+		<ul id="list">
+		  <li>item 1</li>
+		  <li>item 2</li>
+		  <li>item 3</li>
+		  <li>item 4</li>
+		  <li>item 5</li>
+		  <li>item 6</li>
+		  <li>item 7</li>
+		</ul>
+		<button type="button" id="remove">Remove</button> <button type="button" id="add">Add</button>
+		
+		<script type="text/javascript">
+			
+			let nnn = document.getElementById('remove');
+			nnn.onclik = function() {
+			    
+			}
+			
+			let mmm = document.getElementById('add');
+			mmm.onclick = function() {
+				let them = document.createElement('li');
+				them.prepend('item new');
+				let add = document.getElementById('list');
+				add.prepend(them);
+			}
+			
+		</script>
+	</body>
+</html>
