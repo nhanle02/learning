@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+
+<body id="body">
+<div class="box" id="box">
+  <h3>Box title</h3>
+  <ul class="list">
+    <li>item 01</li>
+    <li>item 02</li>
+    <li>item 03</li>
+    <li>item 04</li>
+    <li>item 05</li>
+    <li>item 06</li>
+    <li>item 07</li>
+  </ul>
+</div>
+<button id="button" type="button">Add</button>
+<script>
+  var button = document.getElementById('button');
+  button.onclick = function () {
+      var elementBox = document.getElementById('box').innerHTML;
+
+      var box = document.createElement('div'); // <div class="box"></div>
+      box.setAttribute('id', 'box'); // <div class="box" id="box"></div>
+      box.innerHTML = elementBox; // 
+      document.getElementById('body').prepend(box);
+  };
+</script>
+</body>
+</html>

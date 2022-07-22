@@ -14,14 +14,16 @@
 		  <li>item 6</li>
 		  <li>item 7</li>
 		</ul>
-		<button type="button" id="1" Onclick="getButton();" >Add</button>
+		<button type="button" id="1" onclick="getButton();" >Add</button>
 		<script>
 			function getButton() {
 				let child = document.createElement('li');
-				child.prepend('item new');
+				child.innerHTML = "Item new";
+				// child.prepend('item new');
 			
 				let add = document.getElementById('list');
-				add.prepend(child);
+				// add.prepend(child);
+				add.append(child);
 			}
 		</script>
 	</body>
