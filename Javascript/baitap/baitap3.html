@@ -7,20 +7,25 @@
 	</head>
 	<body>
 		<section class="wrapper">
-			<div class="item">
-			<h2>Title</h2>
-			<p>In suscipit nec velit sit amet convallis. Integer</p>
-			<button type="button" class="button" id="click">click</button>
+			<div class="item" id="item">
+				<h2>Title</h2>
+				<p>In suscipit nec velit sit amet convallis. Integer</p>
 			</div>
-			
+			<button type="button" class="button" id="click" onclick="changeText()">click</button>
 		</section>
 		<script type="text/javascript">
-			var button = document.getElementById('click');
-
-			button.onclick = function() {
-				<!-- location.assign("file:///D:/learning/learning/Javascript/baitap/index.html"); -->
-				location.href = 
+			var elementItem = document.getElementById('item');
+				elementItem.outnerHTML = 'Nhan Đẹp trai';
+			function changeText() {
+				var elementItem = document.getElementById('item');
+				elementItem.outnerHTML = 'Nhan Đẹp trai';
+				console.log(elementItem);
 			}
+			// var button = document.getElementById('click');
+			// button.onclick = function() {
+			// 	var elementItem = document.getElementsByClassName('item');
+			// 	elementItem.outnerHTML = 'Nhan Đẹp trai';
+			// }
 		</script>
 	</body>
 </html>
