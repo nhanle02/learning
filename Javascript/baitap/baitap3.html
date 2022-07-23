@@ -14,12 +14,8 @@
 			<button type="button" class="button" id="click" onclick="changeText()">click</button>
 		</section>
 		<script type="text/javascript">
-			var elementItem = document.getElementById('item');
-				elementItem.outnerHTML = 'Nhan Đẹp trai';
 			function changeText() {
-				var elementItem = document.getElementById('item');
-				elementItem.outnerHTML = 'Nhan Đẹp trai';
-				console.log(elementItem);
+				document.getElementById('item').innerHTML = '<h2>Nhan Đẹp trai</h2>';
 			}
 			// var button = document.getElementById('click');
 			// button.onclick = function() {

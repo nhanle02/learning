@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JQUERY LEARNING</title>
+	<!-- <script src="./js/jquery.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  	//Nội dung jQuery viết ở đây...
+		});
+
+		$(function() {
+		  	//Nội dung jQuery viết ở đây...
+		  	$('.test-jquery, .test-jquery-1, .test-jquery-2').css('color', 'red');
+
+		  	$('span:eq(2)').css('font-size', '50px');
+
+		  	$('li:gt(2)').css('padding-left', '50px');
+
+		  	$('li:even').css('border', '1px solid red');
+
+
+		  	$('li:first-child').css('border', '1px solid green');
+
+		  	$('li[data-position=first]').css('border', '1px solid yellow');
+
+		  	$('.add').add('<span>This is test add element</span>').appendTo('.output');
+
+		  	$('li:last-child').remove();
+
+		  	$('.test-jquery').addClass('test-add-class').addClass('test-add');
+		  	$('.test-jquery').removeClass('test-add');
+
+		  	$('.js-after').after('<div>This is test after succesfully!!!</div>');
+
+		  	$('<div>This is test after succesfully!!!</div>').insertAfter('.js-insertAfter');
+
+		  	let attribute = $('.attribute').attr('data-attr', 'Attributes 123456');
+		  	// $('.attribute').data('a', 'Attributes 123456789');
+		  	// console.log(attribute);
+
+		  	let html = $('.attribute').html('<h1>Nghia dai loc</h1>');
+
+		  	let text = $('.element').text();
+		  	console.log(text);
+
+		  	let val = $('.input-val').val(12345667);
+		  	console.log(val.val());
+
+		  	$('.input-val').change(function () {
+		  		alert('Da change');
+		  	});
+
+		  	$('.clone').clone().appendTo('.append-clone');
+
+		  	let height = $('.box-1').height(500);
+		  	let width = $('.box-1').width(500);
+		  	console.log(height);
+		  	console.log(width);
+
+		  	$('.box-1').click(function () {
+		  		// Doan xu ly code
+		  		$('.box-1').css('background', 'red');
+		  		$(this).toggleClass('toggle');
+		  	});
+
+		  	$('.box-1').dblclick(function () {
+		  		// Doan xu ly code
+		  		$(this).css('background', 'green');
+		  	});
+
+		  	$('.input-val').keyup(function () {
+		  		let val = $(this).val();
+		  		console.log(val);
+		  	});
+
+		  	let liElement = $('li');
+		  	liElement.each(function (index, item) {
+		  		$(item).addClass('item-' + index);
+		  	});
+
+
+		});
+	</script>
+</head>
+<body>
+	<section style="padding-bottom: 200px;">
+		<span class="test-jquery">This is test jquery</span>
+		<span class="test-jquery-1">This is test jquery 1</span>
+		<span class="test-jquery-2">This is test jquery 2</span>
+
+		<ul>
+	        <li>li thứ nhất</li>
+	        <li data-position="first">li thứ hai</li>
+	        <li>li thứ ba</li>
+	        <li>li thứ tư</li>
+	        <li data-position="first">li thứ năm</li>
+	    </ul>
+
+	    <div class="add">
+	    	
+	    </div>
+	    <div class="output">
+	    	
+	    </div>
+
+	    <div class="element">
+	    	<div class="js-after">This is test after</div>
+	    </div>
+	    <div class="js-insertAfter">
+	    	ABC
+	    </div>
+
+	    <div class="attribute" data-a="123" data-attr="Test attribute">
+	    	This is test attribute
+	    </div>
+
+	    <form action="">
+	    	<input type="text" class="input-val" value="123" />
+	    </form>
+
+	    <div class="clone">Noi dung clone</div>
+	    <div class="append-clone">
+	    	<p>gia tri 1</p>
+	    </div>
+
+	    <div class="box-1" style="width: 100px; height: 100px; background: yellow;"></div>
+
+
+	    <div class="output-event">
+	    	<div class="output-click-me">
+	    		
+	    	</div>
+	    	<div class="frame"></div>
+	    	<button class="js-click">Click me</button>
+	    </div>
+
+		<br><br>
+	    <div class="effects">
+	    	<a href="javascript:void(0)" class="js-click-effects">Click me</a>
+	    	<div class="frame"></div>
+	    </div>
+	    <script>
+
+	    	$(function () {
+	    		$('.js-click').click(function () {
+	    			$('.output-click-me').html('<a class="js-tag-a" href="javascript:void(0)">Day la the a voi DOM load sau</a>');
+	    		});
+
+	    		$(document).on('click', '.js-tag-a', function () {
+	    			alert(123);
+	    		});
+
+	    		$('.output-event').find('.js-click').text('Click not me');
+
+	    		$('.js-click').closest('.output-event').addClass('parent'); // parents(''), parent()
+
+	    		$('.js-click-effects').click(function () {
+	    			// $('.frame').
+	    			// $(this).closest('.effects').find('.frame').fadeIn('slow');
+	    			// $(this).closest('.effects').find('.frame').fadeToggle();
+	    			// $(this).closest('.effects').find('.frame').slideDown();
+	    			// $(this).closest('.effects').find('.frame').slideToggle();
+	    			$(this).closest('.effects').find('.frame').show();
+	    		});
+
+	    		$('.effects .frame').click(function () {
+	    			// $(this).fadeOut();
+	    			// $(this).hide();
+	    			$(this).slideUp();
+	    		});
+
+	    		// setTimeout(function () {
+	    		// 	// Action
+	    		// 	$('.effects .frame').slideDown();
+	    		// }, 3000);
+
+	    		setInterval(function () {
+					$('.effects .frame').slideToggle();
+	    		}, 1000);
+	    	});
+	    </script>
+	    <style>
+	    	.frame {
+	    		width: 100%;
+	    		height: 200px;
+	    		background-color: green;
+	    	}
+
+	    	.effects .frame {
+	    		display: none;
+	    	}
+	    </style>
+	</section>
+</body>
+</html>

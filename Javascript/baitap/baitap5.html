@@ -20,8 +20,11 @@
 		<script type="text/javascript">
 			
 			let nnn = document.getElementById('remove');
-			nnn.onclik = function() {
-			    
+
+			nnn.onclick = function() {
+			    var element = document.getElementsByTagName('li');
+			    let length = element.length;
+			    element[length - 1].remove();
 			}
 			
 			let mmm = document.getElementById('add');
@@ -29,7 +32,7 @@
 				let them = document.createElement('li');
 				them.prepend('item new');
 				let add = document.getElementById('list');
-				add.prepend(them);
+				add.append(them);
 			}
 			
 		</script>
