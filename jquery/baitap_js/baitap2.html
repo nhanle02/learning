@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bài tập 2 jqueery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(function(){
+				
+				$('button').click(function(){
+					var a = Number($('#1').val());
+					var b = Number($('#2').val());
+					var span = $('span');
+					if(a > b) {
+						span.text('Max: ' + a);
+					} else {
+						span.text('Max: ' + b);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<section class="box">
+			<input class="in1" type="text" id="1" value="" placeholder="nhập vào chữ số" />
+			<input class="in2" type="text" id="2" value="" placeholder="nhập vào chữ số" />
+			<div>
+				<span id="3"></span>
+			</div>
+			<div>
+				<button>click</button>
+			</div>
+		</section>
+	</body>
+</html>

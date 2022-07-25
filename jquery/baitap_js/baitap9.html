@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bài tập 9 jqueery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			.check-list {
+				list-style: none;
+			}
+			
+			.check-list li {
+				cursor: pointer; 
+				display: inline;
+				border: 2px solid #eee;
+				margin-right: 20px;
+				padding: 10px;
+				height: 40px;
+				width: 40px;
+			}
+			
+			.checked {
+				background-color: #e9ed00;
+			}
+		</style>	
+		<script>
+			$(function(){
+				$('.check-list li').click(function(){
+					$(this).toggleClass('checked');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ul class="check-list">
+			<li class="checked">01</li>
+			<li>02</li>
+			<li>03</li>
+			<li>04</li>
+			<li>05</li>
+			<li>06</li>
+			<li>07</li>
+		</ul>
+	</body>
+</html>

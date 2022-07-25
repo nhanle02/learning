@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bài tập 7_1 jqueery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			h3 {
+				margin-bottom: 10px;
+				cursor:pointer;
+			}
+			
+			.box {
+				border: 3px solid #eee;
+				display: none;
+				height: 100px;
+				margin-top: 5px;
+				padding: 10px;
+				width: 150px;
+			}
+		</style>	
+		<script>
+			$(function(){
+				
+				$('h3').click(function(){
+					$('.box').slideUp(400);
+					$(this).next('.box').slideToggle(400);	
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>Title 01</h3>
+		<div class="box" id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+		<h3>Title 02</h3>
+		<div class="box" id="1">Sed porttitor turpis risus, vitae sodales neque vulputate ut.</div>
+
+		<h3>Title 03</h3>
+		<div class="box" id="1">In suscipit nec velit sit amet convallis. Integer.</div>
+	</body>
+</html>

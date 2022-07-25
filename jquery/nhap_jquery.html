@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>tự học Jquery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('.test-jquery').css('color', 'red');
+				$('#add').css('border', '1px solid black');
+				$('.text, .text1').css('color', 'red');
+				$('.ul li:eq(3)').css('border', '1px solid red').css('margin-top', '10px');
+				$('.ul li:gt(1)').css('border', '2px solid green').css('margin-top', '10px');
+				$('.ul li:lt(2)').css('border', '2px solid green').css('margin-top', '10px');
+				
+				$('.ul1 li:even').css('color', 'red');
+				$('.ul1 li:odd').css('color', 'blue');
+			
+				$('.ul1 li:nth-child(3)').css('margin', '20px 0px').css('border-bottom', '2px dashed black').css('list-style', 'none');
+				$('li[data-position=first]').css('border', '1px solid yellow');
+				
+				
+				$('#1').click(function(){
+					$('.test').add('#1').css('border','1px solid blue');
+					$('.test').add('<p class="test">tôi là ai</p>').appendTo('body');
+					$('.test').add('button', this).addClass('button');
+					}
+				);
+				$('.slide').css('display', 'none');
+				$('.nh').click(function(){
+					$('.slide').slideToggle('slow');
+				});   
+			});
+		</script>
+		<style>
+			.slide {
+				background-color: yellow;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="wrapper">
+			<span class="test-jquery">This is test jquery</span>
+			<span class="test-jquery-1">This is test jquery 1</span>
+			<span class="test-jquery-2">This is test jquery 2</span>
+
+			<ul class="ul">
+				<li>li thứ nhất</li>
+				<li data-position="first">li thứ hai</li>
+				<li>li thứ ba</li>
+				<li>li thứ tư</li>
+				<li data-position="first" title="Việt Nam">li thứ năm</li>
+			</ul>
+
+			<div class="add">
+				<p class="text" id="add">tôi là 1 đứa quái đảng</p>
+			</div>
+			<div class="output">
+				<p class="text1">alo đây là đâu.. và tôi là ai?</p>
+			</div>
+			
+			<div>
+				<ul class="ul1">
+					<li>li thứ nhất</li>
+					<li>li thứ hai</li>
+					<li>li thứ ba</li>
+					<li>li thứ tư</li>
+					<li>li thứ năm</li>
+				</ul>
+			</div>
+			<div class="test">
+				<span>alo alo</span>
+			</div>
+			<button id="1">add</button>
+			
+			<br>
+			<br>
+			<button class="nh">click</button>
+			<div class="slide"></div>
+			
+		<section>
+		
+	</body>
+</html>

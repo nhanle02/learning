@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bài tập 3_1 jqueery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			
+		</style>	
+		<script>
+			$(function(){
+				$('button').click(function(){
+					var n = $('li').last().index();
+					console.log(n);
+					$('.list').add('<li>'+ 'item ' + (n + 2) +'</li>').appendTo('ul');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="list">
+			<li>item 1</li>
+			<li>item 2</li>
+			<li>item 3</li>
+			<li>item 4</li>
+			<li>item 5</li>
+			<li>item 6</li>
+			<li>item 7</li>
+		</ul>
+		<button type="button">Add</button>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bài tập 8 jqueery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			.tab-list {
+				list-style: none;
+				padding: 0;
+			}
+			
+			.tab-list li {
+				display: inline;
+				margin-right: 12px;
+				border: 2px solid black;
+				padding: 5px;
+			}
+			
+			.tab-content {
+				border: 2px solid #eee;
+				width: 400px;
+				height: 200px;
+			}
+			
+			.tab-content .box {
+				display: none;
+			}
+		</style>	
+		<script>
+			$(function(){
+				$('.box:eq(0)').show();
+				$('.tab-list li').click(function(){
+					var n = $('.tab-list li').index(this);
+					
+					$('.box').hide();
+					$('.box:eq('+ n +')').fadeIn('slow');
+				});
+			});
+		</script>
+	</head> 
+	<body>  
+		<ul class="tab-list">
+			<li>Tab 01</li>
+			<li>Tab 02</li>
+			<li>Tab 03</li>
+		 </ul>
+		<div class="tab-content">
+			<div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+			<div class="box">Sed porttitor turpis risus, vitae sodales neque vulputate ut.</div>
+			<div class="box">In suscipit nec velit sit amet convallis. Integer.</div>
+		</div>
+	</body>
+</html>
