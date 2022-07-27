@@ -1,0 +1,81 @@
+1. Tạo database với tên shops
+2. Tạo những table sau:
+   - users
+        id, => int (11) khóa chính, tự động tăng, UNSIGNED,
+        full_name, varchar(100)
+        email, varchar(100), unique
+        password, varchar(200),
+        phone => varchar(20), null
+        address, varchar(255), null
+        avatar, varchar (255), null
+        status => boolean, comment(1: active, 2 deactive), default (1)
+   - posts
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        user_id => khóa ngoại (users), int(11), UNSIGNED,
+        title => varchar(255)
+        description => varchar(1000), null,
+        content => text, null,
+        view_counts => int(11) default(0),
+        comment_counts => int(11) default(0),
+   - post_categories
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        name => varchar(200),
+        slug => varchar(200), unique
+        status => boolean, comment(1: public, 2 unpublic), default(1),
+        thumbnail => varchar(200), null,
+   - products
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        user_id => khóa ngoại (users), int(11), UNSIGNED,
+        name => varchar(255),
+        sku => varchar(100), null
+        price => float,
+        description => varchar(1000), null,
+        content => text, null,
+        review_counts => int(11) default(0),
+        thumbnail => varchar(200), null, 
+   - orders
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        user_id => int(11), khóa ngoại (users), UNSIGNED,
+        status => tinyint(3), default(0),
+        total => float,
+        paid_amount => float,
+        note => text, null,
+        updated_by => int(11), UNSIGNED,
+   - order_details
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        order_id => int(11), khóa ngoại (orders), UNSIGNED,
+        product_id => int(11), khóa ngoại (products), UNSIGNED,
+        name => varchar(255),
+        price => float,
+        sku => varchar(100), null
+        quantity => int(11),
+        total_price => float,
+   - product_reviews
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        product_id => int(11), khóa ngoại (products), UNSIGNED,
+        user_id => int(11), khóa ngoại (users), UNSIGNED,
+        star => float, default(0),
+        content => text, null
+   - product_favorites
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        product_id => int(11), khóa ngoại (products), UNSIGNED,
+        user_id => int(11), khóa ngoại (users), UNSIGNED,
+   - pages
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        user_id => khóa ngoại (users), int(11), UNSIGNED,
+        title => varchar(255),
+        slug => varchar(255), unique,
+        content => text
+   - comments
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        post_id => int(11), khóa ngoại (posts), UNSIGNED,
+        user_id => int(11), khóa ngoại (users), UNSIGNED,
+        content => text
+   - contacts
+        id => int (11) khóa chính, tự động tăng, UNSIGNED,
+        name => varchar(255),
+        email => varchar(200),
+        phone => varchar(20),
+        title => varchar(255),
+        content => text
+3. THực hiện insert mỗi table 5 hàng dữ liệu
