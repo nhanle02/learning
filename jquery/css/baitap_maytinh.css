@@ -30,17 +30,23 @@ body {
 }
 
 .wrapper .content .box-1 .enter {
-	width: 298px;
+	width: 293px;
 	height: 34px;
 	margin: 10px 10px 0 10px;
 	border-bottom: none;
+	font-size: 18px;
+	padding-left: 5px;
+	
 }
 
 .wrapper .content .box-1 .result {
-	width: 298px;
+	width: 293px;
 	height: 34px;
 	margin: 0 10px 0 10px;
+	text-align: right;
 	border-top: none;
+	font-size: 18px;
+	padding-right: 5px;
 }
 
 .wrapper .content .box-2 {
@@ -48,6 +54,24 @@ body {
 	height: 282px;
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.wrapper .content .box-2 .refresh {
+	background-color: #D9544F;
+}
+
+.wrapper .content .box-2 .del {
+	background-color: #EFAD4D;
+}
+
+.wrapper .content .box-2 .operation {
+	background-color: #5BB85D;
+}
+
+.wrapper .content .box-2 .item {
+	background-color: #59C1DC;
 }
 
 .wrapper .content .box-2 button {
@@ -66,7 +90,7 @@ body {
 	text-align: center;
 }
 
-.wrapper .content .box-2 button:nth-child(1) {
+/* .wrapper .content .box-2 button:nth-child(1) {
 	margin-top: 5px;
 	margin-left: 10px;
 	background-color: #D9544F;
@@ -118,7 +142,7 @@ body {
 	background-color: #59C1DC;
 }
 
-
+*/
 
 
 

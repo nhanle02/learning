@@ -1,0 +1,19 @@
+required: true,
+
+<!--minlength: 3, -->
+<!--maxlength: 20,-->
+rangelength: [3, 20],
+<!--step: 10, -->
+<!--digits: true,-->
+
+<!--min: 14, -->
+<!--max: 50, -->
+<!--range: [14, 50],-->
+number: true,
+
+url: true,
+
+equalTo: "#password",
+
+remote: 'test_Jquery_Validate.html',
+<!-- date: true, -->
