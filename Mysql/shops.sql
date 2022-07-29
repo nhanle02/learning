@@ -16,29 +16,30 @@
 
 
 -- Dumping database structure for shops
-CREATE DATABASE IF NOT EXISTS `shops` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `shops`;
 USE `shops`;
 
--- Dumping structure for table shops.comments
-CREATE TABLE IF NOT EXISTS `comments` (
+-- Dumping structure for table shops.users
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `post_id` int unsigned NOT NULL,
-  `user_id` int unsigned NOT NULL,
-  `content` text NOT NULL,
+  `full_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1: active, 2 deactive',
   PRIMARY KEY (`id`),
-  KEY `post_id` (`post_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  UNIQUE KEY `email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table shops.comments: ~0 rows (approximately)
-REPLACE INTO `comments` (`id`, `post_id`, `user_id`, `content`) VALUES
-	(1, 1, 1, ''),
-	(2, 2, 2, ''),
-	(3, 3, 3, ''),
-	(4, 4, 4, ''),
-	(5, 5, 5, '');
+-- Dumping data for table shops.users: ~0 rows (approximately)
+REPLACE INTO `users` (`id`, `full_name`, `email`, `password`, `phone`, `address`, `avatar`, `status`) VALUES
+	(1, 'tran van a', 'tranvana@gmail.com', '123456', '0123456789', 'quang ngai', 'van a', 1),
+	(2, 'tran van b', 'tranvanb@gmail.com', '123455', '0123456788', 'da nang', 'van b', 2),
+	(3, 'le dinh nhan', 'nhanle1@gmail.com', '123454', '0123456799', 'quang nam', 'nhan le', 1),
+	(4, 'le nghia', 'nghiale@gmail.com', '121212', '0942534450', 'quang nam', 'nghia le', 2),
+	(5, 'le thi c', 'lethic@gmail.com', '131313', '0942532345', 'da nang', 'thi c', 1);
 
 -- Dumping structure for table shops.contacts
 CREATE TABLE IF NOT EXISTS `contacts` (
@@ -58,6 +59,31 @@ REPLACE INTO `contacts` (`id`, `name`, `email`, `phone`, `title`, `content`) VAL
 	(3, 'nhan le', 'nhanle1@gmail.com', '0123456799', 'áo', ''),
 	(4, 'nghia le', 'nghiale@gmail.com', '0942534450', 'giày dép', ''),
 	(5, 'thi c', 'lethic@gmail.com', '0942532345', 'váy', '');
+
+
+-- Dumping structure for table shops.products
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int unsigned NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sku` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` float NOT NULL,
+  `description` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `review_counts` int NOT NULL DEFAULT '0',
+  `thumbnail` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table shops.products: ~0 rows (approximately)
+REPLACE INTO `products` (`id`, `user_id`, `name`, `sku`, `price`, `description`, `content`, `review_counts`, `thumbnail`) VALUES
+	(1, 1, 'mũ ', '', 199000, 'Chất liệu vải an toàn cho sức khỏe, Chất vải thoáng mát tạo cảm giác thoải mái khi mặc, Kiểu dáng thời trang đẹp mắt, Thiết kế mang phong cách hiện đại, cá tính', '', 0, ''),
+	(2, 2, 'quần jean', '', 299000, 'quần jean chất liệu cao cấp, thiết kế đẹp, giá tốt.', '', 0, ''),
+	(3, 3, 'giày thể thao', '', 399000, 'Sử Dụng Chất Liệu Có Độ Đàn Hồi Cao Độ Bền Tốt, Giúp Tăng Độ Êm Ái Cho Chân. Thiết Kế Bề Mặt Dạng Lưới Giúp Giày Có Độ Thông Thoáng Cao, Mang Lại Cảm...', '', 0, ''),
+	(4, 4, 'áo thun', '', 99000, 'Tuy thiết kế đơn giản nhưng sở hữu vẻ đẹp thời trÁo Thun ICON DENIM Rebellion Printedang trường tồn theo thời gian và các sản phẩm áo thun tại 160STORE luôn ...', '', 0, ''),
+	(5, 5, 'váy ngắn', '', 299000, 'chất liệu cao cấp, thiết kế đa dạng, giá ưu đãi...', '', 0, '');
 
 -- Dumping structure for table shops.orders
 CREATE TABLE IF NOT EXISTS `orders` (
@@ -127,6 +153,25 @@ REPLACE INTO `pages` (`id`, `user_id`, `title`, `slug`, `content`) VALUES
 	(4, 4, 'áo', 'slug4', ''),
 	(5, 5, 'váy', 'slug5', '');
 
+-- Dumping structure for table shops.post_categories
+CREATE TABLE IF NOT EXISTS `post_categories` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1: public, 2 unpublic',
+  `thumbnail` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `Slug_Unique` (`slug`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table shops.post_categories: ~6 rows (approximately)
+REPLACE INTO `post_categories` (`id`, `name`, `slug`, `status`, `thumbnail`) VALUES
+	(1, 'van a ', 'slug1', 1, ''),
+	(2, 'van b', 'slug2', 2, ''),
+	(3, 'nhan le', 'slug3', 1, ''),
+	(4, 'nghia le', 'slug4', 1, ''),
+	(5, 'thi c', 'slug5', 2, '');
+
 -- Dumping structure for table shops.posts
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
@@ -149,48 +194,26 @@ REPLACE INTO `posts` (`id`, `user_id`, `title`, `description`, `content`, `view_
 	(4, 4, 'áo', 'chủ để này nói về áo', '', 0, 0),
 	(5, 5, 'váy', 'chủ để này nói về váy', '', 0, 0);
 
--- Dumping structure for table shops.post_categories
-CREATE TABLE IF NOT EXISTS `post_categories` (
+-- Dumping structure for table shops.comments
+CREATE TABLE IF NOT EXISTS `comments` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1: public, 2 unpublic',
-  `thumbnail` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `Slug_Unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table shops.post_categories: ~6 rows (approximately)
-REPLACE INTO `post_categories` (`id`, `name`, `slug`, `status`, `thumbnail`) VALUES
-	(1, 'van a ', 'slug1', 1, ''),
-	(2, 'van b', 'slug2', 2, ''),
-	(3, 'nhan le', 'slug3', 1, ''),
-	(4, 'nghia le', 'slug4', 1, ''),
-	(5, 'thi c', 'slug5', 2, '');
-
--- Dumping structure for table shops.products
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` int unsigned NOT NULL,
   `user_id` int unsigned NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sku` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` float NOT NULL,
-  `description` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `review_counts` int NOT NULL DEFAULT '0',
-  `thumbnail` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text NOT NULL,
   PRIMARY KEY (`id`),
+  KEY `post_id` (`post_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+  CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table shops.products: ~0 rows (approximately)
-REPLACE INTO `products` (`id`, `user_id`, `name`, `sku`, `price`, `description`, `content`, `review_counts`, `thumbnail`) VALUES
-	(1, 1, 'mũ ', '', 199000, 'Chất liệu vải an toàn cho sức khỏe, Chất vải thoáng mát tạo cảm giác thoải mái khi mặc, Kiểu dáng thời trang đẹp mắt, Thiết kế mang phong cách hiện đại, cá tính', '', 0, ''),
-	(2, 2, 'quần jean', '', 299000, 'quần jean chất liệu cao cấp, thiết kế đẹp, giá tốt.', '', 0, ''),
-	(3, 3, 'giày thể thao', '', 399000, 'Sử Dụng Chất Liệu Có Độ Đàn Hồi Cao Độ Bền Tốt, Giúp Tăng Độ Êm Ái Cho Chân. Thiết Kế Bề Mặt Dạng Lưới Giúp Giày Có Độ Thông Thoáng Cao, Mang Lại Cảm...', '', 0, ''),
-	(4, 4, 'áo thun', '', 99000, 'Tuy thiết kế đơn giản nhưng sở hữu vẻ đẹp thời trÁo Thun ICON DENIM Rebellion Printedang trường tồn theo thời gian và các sản phẩm áo thun tại 160STORE luôn ...', '', 0, ''),
-	(5, 5, 'váy ngắn', '', 299000, 'chất liệu cao cấp, thiết kế đa dạng, giá ưu đãi...', '', 0, '');
+-- Dumping data for table shops.comments: ~0 rows (approximately)
+REPLACE INTO `comments` (`id`, `post_id`, `user_id`, `content`) VALUES
+	(1, 1, 1, ''),
+	(2, 2, 2, ''),
+	(3, 3, 3, ''),
+	(4, 4, 4, ''),
+	(5, 5, 5, '');
 
 -- Dumping structure for table shops.product_favorites
 CREATE TABLE IF NOT EXISTS `product_favorites` (
@@ -231,28 +254,6 @@ REPLACE INTO `product_reviews` (`id`, `product_id`, `user_id`, `star`, `content`
 	(3, 3, 3, 0, ''),
 	(4, 4, 4, 0, ''),
 	(5, 5, 5, 0, '');
-
--- Dumping structure for table shops.users
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `full_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1: active, 2 deactive',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table shops.users: ~0 rows (approximately)
-REPLACE INTO `users` (`id`, `full_name`, `email`, `password`, `phone`, `address`, `avatar`, `status`) VALUES
-	(1, 'tran van a', 'tranvana@gmail.com', '123456', '0123456789', 'quang ngai', 'van a', 1),
-	(2, 'tran van b', 'tranvanb@gmail.com', '123455', '0123456788', 'da nang', 'van b', 2),
-	(3, 'le dinh nhan', 'nhanle1@gmail.com', '123454', '0123456799', 'quang nam', 'nhan le', 1),
-	(4, 'le nghia', 'nghiale@gmail.com', '121212', '0942534450', 'quang nam', 'nghia le', 2),
-	(5, 'le thi c', 'lethic@gmail.com', '131313', '0942532345', 'da nang', 'thi c', 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

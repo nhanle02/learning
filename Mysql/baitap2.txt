@@ -1,0 +1,17 @@
+1. Với bảng users, hãy trả lại email của tất cả user đang active, tức là những người có status = 1. Bảng kết quả sẽ chứa một cột email duy nhất và được sắp xếp theo email theo thứ tự giảm  dần.
+
+2. Với bảng products, Hãy đưa ra một bảng kết quả chứa một hàng với một cột duy nhất: bảng có cột tên name với điều kiện:
+	+ Cột name sắp xếp tăng dần.
+	+ price là lớn nhất.
+
+3. Bảng users, hãy đưa ra bảng kết quả gồm các cột id, name biết rằng:
+    + Tên bắt đầu bằng chữ l
+    + Địa chỉ gồm 7 ký tự với 6 ký tự đã biết là: 'da _ang'. Trong đó _ thể hiện cho một ký tự bất kỳ.
+
+4. Lấy 3 sản phẩm mới nhất vừa được thêm vào Hệ thống (table products)
+5. Lấy sản phẩm mà tên sản phẩm có chứa chữ 'Samsung' (table products)
+6. Lấy các sản phẩm với tên có chứa 'MacBook' và giá niêm yết (giá bán) trên 1,000,000 (products)
+
+7. Thêm field ngày order (order_date) vào folder order. Liệt kệ Danh sách các Đơn hàng trong tháng 07/2016? (table orders)
+
+8. Lấy mã sản phẩm, tên sản phẩm, giá nhập, số lượng, tên người thêm, mã sản phẩm, của những sản phẩm có giá lớn hơn 2.000.000
