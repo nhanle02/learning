@@ -1,6 +1,6 @@
 1. Với bảng users, hãy trả lại email của tất cả user đang active, tức là những người có status = 1. Bảng kết quả sẽ chứa một cột email duy nhất và được sắp xếp theo email theo thứ tự giảm  dần.
 
-2. Với bảng products, Hãy đưa ra một bảng kết quả chứa một hàng với một cột duy nhất: bảng có cột tên name với điều kiện:
+2. Với bảng products, Hãy đưa ra một bảng kết quả chứa một hàng một cột duy nhất: bảng có cột tên name với điều kiện:
 	+ Cột name sắp xếp tăng dần.
 	+ price là lớn nhất.
 

@@ -7,8 +7,12 @@ ORDER BY email DESC;
 
 -- 2. 
 
-SELECT `name` FROM `products`  
-ORDER BY name ASC;
+SELECT `name` FROM products 
+WHERE price = ( 
+	SELECT max(price) FROM products
+)
+ORDER BY name ASC
+LIMIT 1;
 
 -- 3.
 
@@ -29,15 +33,22 @@ SELECT * FROM products WHERE name LIKE '%samsung%';
 SELECT * FROM products WHERE name LIKE '%MacBook%' AND price >= 1000000;
 
 -- 7.
+-- cách 1
+SELECT * FROM `orders` WHERE YEAR(order_date) = 2022 AND MONTH(order_date) = 7;
 
+-- cách 2
+SELECT * FROM `orders` WHERE order_date BETWEEN '2022-07-01' AND '2022-07-31';
+
+-- hạn chế dùng: dùng ở trường hợp tìm kiếm
 SELECT * FROM `orders` WHERE order_date LIKE '2022-07%';
 
 -- 8.
 
-SELECT products.id,`name`, `price`, `full_name`
-FROM users 
-INNER JOIN products ON users.id = products.user_id
-WHERE price >= 2000000;
+SELECT products.id, products.name, products.price, `quantity`, `full_name`
+FROM products 
+INNER JOIN users ON products.user_id = users.id
+INNER JOIN order_details ON products.id = order_details.product_id
+WHERE products.price >= 200000;
 
 
 
