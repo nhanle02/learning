@@ -109,7 +109,15 @@
 
     #Kiểm tra một biến kiểu mảng: is_array($bien)
     # Trả về giá trị true hoặc false
-    
+
+#3.6. Kiểu giá trị Null
+    #Đây là kiểu đặc biệt trong PHP và cũng như các ngôn ngữ lập trình khác, nó mang giá trị rỗng.
+
+    #Lúc bạn khởi tạo một biến và bạn gán = NULL thì sẽ hệ thông sẽ không tốn bộ nhớ để lưu trữ, nên việc sử dụng nó rất có lợi.
+
+    #Kiểu NULL khi ép kiểu sang kiểu INT thì bằng 0, khi ép kiểu sang kiểu chuỗi thì = rỗng, và khi ép sang kiểu boolean thì mang giá trị FALSE.
+
+    #Kiểm tra một biến có giá trị null: is_null($bien)
 
 ?>
 
