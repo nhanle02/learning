@@ -148,23 +148,29 @@
     height: 600px;
     background-color: #e7e7e7;
     background-image: url(../images/1.png);
+    background-position: right -127px;
+    background-repeat: no-repeat;
+}
+
+.header .background .content {
+    width: 100%;
+    max-width: 1172px;
+    margin: auto;
+    padding-top: 160px;
+    text-align: left;
 }
 
 .header .background .title1 {
-    margin-left: 13%;
-    padding-top: 160px;
     color: #3f3f3f;
 }
 
 .header .background .title2 {
-    margin-left: 13%;
     color: #3f3f3f;
     font-size: 40px;
     margin-top: 10px;
 }
 
 .header .background .text {
-    margin-left: 13%;
     color: #3f3f3f;
     font-size: 14px;
     margin-top: 18px;
@@ -172,7 +178,6 @@
 }
 
 .header .background .button {
-    margin-left: 13%;
     margin-top: 40px;
 }
 
