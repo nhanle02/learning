@@ -119,12 +119,98 @@
 
     #Kiểm tra một biến có giá trị null: is_null($bien)
 
+
+    $sinhvien = [
+        'Nguyễn A',
+        'Nguyễn B',
+        'Nguyễn C',
+        'Nguyễn D',
+        'Nguyễn E',
+        'Nguyễn F'
+    ];
+
+    echo "<br /> <br />";
+    $count = count($sinhvien);
+    for ($i = 0; $i < $count; $i++) {
+        echo $sinhvien[$i] . "<br />";
+    }
+
+    echo "<br /> <br />";
 ?>
+<h2>
+    <?php echo "Vòng lặp foreach"; ?>
+</h2>
+<?php
+foreach ($sinhvien as $key => $value) {
+    echo 'Chỉ mục: ' . $key . ' Giá trị: ' . $value . '<br />';
+}
+echo "<br /> <br />";
 
-<?
+$array = [
+    'key_1' => 'Value 1',
+    'key_2' => 'Value 2',
+    'key_4' => [
+        'Student 1',
+        'Student 2',
+        'Student 3',
+        'Student 4',
+        'Student 5',
+    ],
+    'key_3' => 'Value 3',
+];
+foreach ($array as $key => $value) {
+    if (is_array($value)) {
+        foreach ($value as $valueSub) {
+            echo '--- Giá trị: ' . $valueSub . '<br />';
+        }
+    } else {
+        echo 'Chỉ mục: ' . $key . ' Giá trị: ' . $value . '<br />';
+    }
+}
 
-?>
+echo "<br /> <br />";
+echo "<h2>Function trong PHP</h2>";
+function myFunction() {
+    return 'This is test function';
+}
 
-<script language = php>
+echo myFunction();
+echo "<br /> <br />";
 
-</script>
+function kiemTraSoChan($number) {
+    if ($number % 2 === 0) {
+        return true;
+    }
+    return false;
+}
+
+$number = 99;
+
+if (kiemTraSoChan($number)) {
+    echo $number . ' la so chan';
+} else {
+    echo $number . ' la so le';
+}
+
+echo "<br /> <br />";
+echo "<h2>Ky thuat dat linh canh</h2> <br />";
+echo "Tim so lon nhat trong mang da cho.";
+
+function timMax($mang) {
+    $count = count($mang);
+    $max = $mang[0];
+    for ($i = 1; $i < $count; $i++) {
+        if ($mang[$i] > $max) {
+            $max = $mang[$i];
+        } else {
+            $max = $max;
+        }
+    }
+    return $max;
+}
+$mang = [
+    2, 5, 7, 10, 1, 29, 15,
+];
+echo '<br />' . timMax($mang);
+
+// <script language = php></script>
