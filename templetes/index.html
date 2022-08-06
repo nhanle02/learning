@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/main.js"></script>
     <title>Trang chủ</title>
 </head>
 <body>
@@ -56,12 +58,20 @@
                 </form>
             </div>
         </div>
+        
         <div class="categories">
             <div class="box">
                 <div class="item">
-                    <div class="menu">
-                        <i class="fas fa-bars"></i>
-                        <a class="text-menu" href="./index.html" >SHOP BY CATEGORY</a>
+                    <div class="menu js-click">
+                        <i class="fas fa-bars" ></i>
+                        <a class="text-menu" href="#" >SHOP BY CATEGORY</a>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="list-menu">
+                            <li><a href="./index.html">trang chu</a></li>
+                            <li><a href="./index.html">thong tin</a></li>
+                            <li><a href="./index.html">tin tuc</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="item">
@@ -70,22 +80,52 @@
                 <div class="item" >
                     <a class="text" href="./index.html" >SHOP</a>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">quần</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                    </div>
                 </div>
                 <div class="item">
                     <a class="text" ./index.html >BLOG</a>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">áo</a>
+                        <a href="./index.html">váy</a>
+                    </div>
                 </div>
                 <div class="item">
                     <a class="text" ./index.html >SHORTCODE</a>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">giày dép</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                    </div>
                 </div>
                 <div class="item">
                     <a class="text" href="./index.html" >PAGE</a>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">áo</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">quần</a>
+                    </div>
                 </div>
                 <div class="item">
                     <a class="text" href="./index.html" >THEME FEATURES</a>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                    </div>
                 </div>
                 <div class="item">
                     <a class="text" href="./index.html" >CONTACTUS</a>
@@ -130,13 +170,22 @@
             </div>
             <div class="item">
                 <h3>INFORMATION</h3>
-                <p class="text">Frequently Asked Questions<br>
+                <!-- <p class="text">Frequently Asked Questions<br>
                 Terms and Conditions<br>
                 Privacy Policy<br>
                 Terms & Conditions<br>
                 Customer Service<br>
                 Delivery Information<br>
-                Manufacturers</p>
+                Manufacturers</p> -->
+                <div class="link">
+                    <a href="./index.html">Frequently Asked Questions</a>
+                    <a href="./index.html">Terms and Conditions</a>
+                    <a href="./index.html">Privacy Policy</a>
+                    <a href="./index.html">Terms & Conditions</a>
+                    <a href="./index.html">Customer Service</a>
+                    <a href="./index.html">Delivery Information</a>
+                    <a href="./index.html">Manufacturers</a>
+                </div>
             </div>
             <div class="item">
                 <h3>RENCENT POSTS</h3>
@@ -146,7 +195,7 @@
                         <p class="text-button">JUNE</p>
                     </div>
                     <div class="box-right">
-                        <p>Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit</p>
+                        <a href="./index.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
                     </div>
                 </div>
                 <div class="box">
@@ -155,7 +204,7 @@
                         <p class="text-button">JUNE</p>
                     </div>
                     <div class="box-right">
-                        <p>Ut wisi enim ad minim veniam<br>nibh euismod tincidunt ut<br>laoreet dolore magna</p>
+                        <a href="./index.html">Ut wisi enim ad minim veniam nibh euismod tincidunt ut laoreet dolore magna</a>
                     </div>
                 </div>
             </div>
