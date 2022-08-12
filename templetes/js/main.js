@@ -28,4 +28,6 @@ $(function() {
           }
         ]
       });
+
+      $('.single-item').slick();
 });
