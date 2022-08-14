@@ -21,11 +21,11 @@
             
         }
         echo '<br>' .'<br>';
-        echo $user ;
+        echo $user ?? '';
         echo '<br>' .'<br>';
-        echo $password;
-    ?>
+        echo $password ?? '';
 
+    ?>
     <h2>4. Lấy địa chỉ Client IP trong PHP</h2>
     <?php 
         if (isset($_SERVER['HTTP_CLIENT_IP']))     

@@ -10,8 +10,12 @@
     <h2>7. Đổi màu kí tự đầu tiên của từ trong PHP</h2>
     <?php
         $text = 'which company do you work at?';  
-        $text = preg_replace('/(\b[a-z])/i','<span style="color:red;">\1</span>',$text);  
-        echo $text;
+        //$text = preg_replace('/(\b[a-z])/i','<span style="color:red;">\1</span>',$text);
+        $startWord = substr($text, 0, 1);
+        $exp = explode($startWord, $text);
+        array_shift($exp);
+        $text = implode('', $exp);
+        echo '<span style="color:red;">' . $startWord . '</span>' . $text;
     ?>
 
     <h2>8. Viết PHP script để kiểm tra xem trang là được gọi từ https hay http</h2>

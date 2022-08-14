@@ -21,13 +21,13 @@
     <h2>16. Viết PHP script để tạo mảng liên hợp hiển thị tên các quốc gia và thủ đô</h2>
     <?php
         $array = [
-            "Italy"=>"Rome", "Luxembourg"=>"Luxembourg",  
-			"Belgium"=> "Brussels", "Denmark"=>"Copenhagen",  
-			"Finland"=>"Helsinki", "France" => "Paris",  
-			"Slovakia"=>"Bratislava", "Slovenia"=>"Ljubljana",  
+            "Italy" => "Rome", "Luxembourg" => "Luxembourg",  
+			"Belgium" => "Brussels", "Denmark" => "Copenhagen",  
+			"Finland" => "Helsinki", "France" => "Paris",  
+			"Slovakia" => "Bratislava", "Slovenia" => "Ljubljana",  
 			"Germany" => "Berlin", "Greece" => "Athens",  
-			"Ireland"=>"Dublin", "Netherlands"=>"Amsterdam",
-			"Austria" => "Vienna", "Poland"=>"Warsaw",
+			"Ireland"=> "Dublin", "Netherlands" => "Amsterdam",
+			"Austria" => "Vienna", "Poland" => "Warsaw",
         ];
 
         asort($array);
