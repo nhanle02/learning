@@ -1,0 +1,2 @@
+Trước khi dùng hàm này bạn nên dùng hàm is_writable để kiểm tra file có được phép ghi không.
+        Ta dùng hàm file_put_contents($path, $noidung) để ghi nội dung cho một file, trong đó $path là đường dẫn đến file cần ghi, $noidung là nội dung bạn muốn ghi vào file.

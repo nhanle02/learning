@@ -55,6 +55,6 @@
         </form>
         <?php echo $result; ?>
         <br> <br>
-        <!-- <span>kq: </span> -->
     </body>
 </html>
+
