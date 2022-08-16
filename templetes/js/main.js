@@ -30,4 +30,7 @@ $(function() {
       });
 
       $('.single-item').slick();
+      
+      $('.list-item').slick();
+      $('.list-image').slick();
 });

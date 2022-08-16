@@ -374,6 +374,10 @@
     color: #3f3f3f;
     cursor: pointer;
 }
+.header .background .button .buy:hover,
+.header .background .content .button .view:hover {
+    background-color: #40bea7;
+}
 
 .header .background .content .button .buy a {
     text-decoration: none;
@@ -382,6 +386,7 @@
 
 .footer {
     background-color: #383838;
+    margin-top: -4px;
 }
 
 .footer .wrap {
