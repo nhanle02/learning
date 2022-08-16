@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/main.js"></script>
+    
     <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.js"></script>
     <title>Trang chủ</title>
 </head>
 <body>
@@ -147,10 +148,895 @@
         </div>
     </header>
     <section class="wrapper">
-        <div class="abc">
+        <div class="features">
+            <div class="image" style="background-image: url('./images/anh1.png'); background-repeat: no-repeat; width: 391px; height: 158px; color: white;">
+                <div class="wrap">
+                    <div class="title">
+                        <div class="sub-title">
+                            <h3 class="title-left">FREE</h3>
+                            <h3 class="title-right">Shipping</h3>
+                        </div> 
+                        <div class="text-bottom">
+                            <span>On all orders over $50.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image" style="background-image: url('./images/anh2.png'); background-repeat: no-repeat; width: 391px; height: 158px; color: white;">
+                <div class="wrap">
+                    <div class="title">
+                        <div class="sub-title">
+                            <h3 class="title-left">FREE</h3>
+                            <h3 class="title-right">Return</h3>
+                        </div> 
+                        <div class="text">
+                            <span>Only for all orders over $100.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <div class="image" style="background-image: url('./images/anh3.png'); background-repeat: no-repeat; width: 391px; height: 158px; color: white;">
+                <div class="wrap">  
+                    <div class="title">
+                        <div class="sub-title">
+                            <h3 class="title-left">FREE</h3>
+                            <h3 class="title-right">Support</h3>
+                        </div> 
+                        <div class="text">
+                            <span>24/7 from Monday to Friday</span>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-left">
+                <div class="item border">
+                    <div class="title"><h3>TOP RATED</h3></div>
+                    <div class="list-pr">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                    
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <img src="./images/background-box.png" alt="">
+                    </div>
+                </div>
+                <div class="item border content">
+                    <div class="wrap">
+                        <div class="sub_title">
+                            <h3 class="test">TESTIMONIALS</h3>
+                        </div>
+                        <div class="slider list-item">
+                            <div class="list">
+                                <div class="text">
+                                    <p class="description">" Duis a orci nunc . Suspendisse ac euis-mod justo , in fringilla diam . Nulla con-   sectetur lacus odio . Fusce a sodales nulla . Nulla vitae commodo dolor , id cursus mauris .</p>
+                                </div>
+                                <div class="developer">
+                                    <div class="image"><img src="./images/dev.png" alt=""></div>
+                                    <div class="name">
+                                        <h3 class="full_name">John hendry Doe</h3>
+                                        <p class="text">Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="text">
+                                    <p class="description">" Duis a orci nunc . Suspendisse ac euis-mod justo , in fringilla diam . Nulla con-   sectetur lacus odio . Fusce a sodales nulla . Nulla vitae commodo dolor , id cursus mauris .</p>
+                                </div>
+                                <div class="developer">
+                                    <div class="image"><img src="./images/dev.png" alt=""></div>
+                                    <div class="name">
+                                        <h3 class="full_name">John hendry Doe</h3>
+                                        <p class="text">Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="text">
+                                    <p class="description">" Duis a orci nunc . Suspendisse ac euis-mod justo , in fringilla diam . Nulla con-   sectetur lacus odio . Fusce a sodales nulla . Nulla vitae commodo dolor , id cursus mauris .</p>
+                                </div>
+                                <div class="developer">
+                                    <div class="image"><img src="./images/dev.png" alt=""></div>
+                                    <div class="name">
+                                        <h3 class="full_name">John hendry Doe</h3>
+                                        <p class="text">Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="item border">
+                    <div class="brands">
+                        <div class="text">
+                            <h3 class="title">our brands</h3>
+                        </div>
+                        <div class="slider list-image item-slider">
+                            <div class="slick-list">
+                                <div class="images">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slick-list">
+                                <div class="images">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slick-list">
+                                <div class="images">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                    <img src="./images/brands.png" alt="">
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-right">
+                <div class="item border">
+                    <div class="slick">
+                        <div class="js-slick-slide">
+                            <div class="title">
+                                featured products
+                            </div>
+                            <div class="title">
+                                featured products
+                            </div>
+                            <div class="title">
+                                featured products
+                            </div>
+                            <div class="title ">
+                                featured products
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/product1.png"/>
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="item">
+                    <div class="img">
+                        <img src="./images/ADVS.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="item border">
+                    <div class="sub_title">
+                        <h3>special products</h3>
+                    </div>
+                    <div class="wrap">
+                        <div class="wrap-left">
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product3.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-right">
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product4.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product4.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product4.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product4.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product4.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img">
+                                    <img id="img" src="./images/product4.png"/>
+                                </div>
+                                <div class="text">
+                                    <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                    <div class="sub-text">
+                                        <span id="text">Cras ipsum massa</span>
+                                    </div>
+                                    <div class="cash"><span id="cash">$20.99</span></div>
+                                    <div class="star-rating">  <!--  title="70%"-->
+                                        <div class="back-stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            
+                                            <div class="front-stars">  <!--style="width: 70%;" -->
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="form" style="background-image: url(./images/background-box1.png); width: 870px; height: 260px;">
+                        <div class="title">
+                            <h2>NEWSLETTER</h2>
+                        </div>
+                        <div class="text">
+                            <p class="description">
+                                Enjoy our newsletter to stay updated with the latest news and special sales. Let's your email address here!
+                            </p>
+                        </div>
+                        <form class="submit" action="" method="">
+                            <input class="email" type="text" name="email" placeholder="Enter your email address" >
+                            <button class="button">READ MORE</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="slide">
+            <div class="item " style="background-image: url(./images/slideshow3.png); width: 570px; height: 220px;">        
+                <div class="title">
+                    <div class="sub-title">
+                        <h3>New Shoes</h3>
+                    </div> 
+                    <div class="sub-title">
+                        <h3>Casual</h3>
+                    </div>
+                    <div class="text-bottom">
+                        <span>sale up to 70%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./images/slideshow4.png); width: 570px; height: 220px;">
+                <div class="title">
+                    <div class="text-top">
+                        <span>New arrivals</span>
+                    </div>
+                    <div class="sub-title">
+                        <h3>t-shirt</h3>
+                    </div> 
+                    <div class="sub-title">
+                        <h3>Clothing</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="list-position slider single-item">
+				<div class="item">
+					lastest news
+				</div>
+				<div class="item">
+					lastest news
+				</div>
+				<div class="item">
+					lastest news
+				</div>
+				<div class="item">
+					lastest news
+				</div>
+				<div class="item">
+					lastest news
+				</div>
+				<div class="item">
+					lastest news
+				</div>
+			</div>
+        </div>
+        <div class="list-box">
+            <div class="box">
+                <div class="item" style="background-image: url(./images/back-ground.png); width:370px; height:221px">
+                    <div class="day-month">
+                        <div class="day">19</div>
+                        <div class="month">JUNE</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h3>Vestibulum sapien turpis</h3>
+                    </div>
+                    <div class="text">
+                        <p>Quisque at orci gravida, dictum turpis vitae, sagittis dui. Integer cursus auctor ex id accumsan. Nam mollis porta facilisis. Fusce porttitor augue lectus.</p>
+                    </div>
+                    <div class="comment">
+                        <div class="icon">
+                            <i class="fas fa-caret-right"></i>
+                            <span class="read"><a class="read" href="./index.html">Read More</a></span>
+                        </div>
+                        <div class="icon">
+                            <i class="far fa-comments"></i>
+                            <span class="count">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="item" style="background-image: url(./images/back-ground.png); width:370px; height:221px">
+                    <div class="day-month">
+                        <div class="day">19</div>
+                        <div class="month">JUNE</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h3>Vestibulum sapien turpis</h3>
+                    </div>
+                    <div class="text">
+                        <p>Quisque at orci gravida, dictum turpis vitae, sagittis dui. Integer cursus auctor ex id accumsan. Nam mollis porta facilisis. Fusce porttitor augue lectus.</p>
+                    </div>
+                    <div class="comment">
+                        <div class="icon">
+                            <i class="fas fa-caret-right"></i>
+                            <span class="read"><a class="read" href="./index.html">Read More</a></span>
+                        </div>
+                        <div class="icon">
+                            <i class="far fa-comments"></i>
+                            <span class="count">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="item" style="background-image: url(./images/back-ground.png); width:370px; height:221px">
+                    <div class="day-month">
+                        <div class="day">19</div>
+                        <div class="month">JUNE</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h3>Vestibulum sapien turpis</h3>
+                    </div>
+                    <div class="text">
+                        <p>Quisque at orci gravida, dictum turpis vitae, sagittis dui. Integer cursus auctor ex id accumsan. Nam mollis porta facilisis. Fusce porttitor augue lectus.</p>
+                    </div>
+                    <div class="comment">
+                        <div class="icon">
+                            <i class="fas fa-caret-right"></i>
+                            <span class="read"><a class="read" href="./index.html">Read More</a></span>
+                        </div>
+                        <div class="icon">
+                            <i class="far fa-comments"></i>
+                            <span class="count">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <div class="video">
+        <iframe width="100%" height="420" src="https://www.youtube.com/embed/oOlAYiot7mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <footer class="footer">
         <div class="wrap">
             <div class="item">
@@ -170,13 +1056,6 @@
             </div>
             <div class="item">
                 <h3>INFORMATION</h3>
-                <!-- <p class="text">Frequently Asked Questions<br>
-                Terms and Conditions<br>
-                Privacy Policy<br>
-                Terms & Conditions<br>
-                Customer Service<br>
-                Delivery Information<br>
-                Manufacturers</p> -->
                 <div class="link">
                     <a href="./index.html">Frequently Asked Questions</a>
                     <a href="./index.html">Terms and Conditions</a>
@@ -232,5 +1111,8 @@
             <i class="fab fa-cc-paypal"></i>
         </div>
     </footer>
+
+    <script src="./js/main.js"></script>
+    <script type="text/javascript" src="./css/slick/slick.min.js"></script>
 </body>
 </html>
