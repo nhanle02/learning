@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-    <title>Bai tap voi co so du lieu</title>
-</head>
-<body>
-    <?php
-        try {
-            $host = 'localhost';
-            $username = 'root';
-            $password = '';
-            $dbname = 'shops';
-            // Kết nối
-            $conn = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $username, $password);
-
-            //Thiết lập chế độ lỗi
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            echo "Kết nối thất bại: " . $e->getMessage();
-        }
-    ?>
+<?php
+    require "./common/header.php";
+?>
     <h4>Thực hiện chức năng CRUD với table users</h4>
     <?php
         $mysql = "SELECT * FROM users";
@@ -41,7 +19,7 @@
         // echo print_r($results, true);
         // echo '</pre>'
     ?>
-    <a href="" class="btn btn-success mb-1">Create +</a>
+    <a href="create.php" class="btn btn-success mb-1">Create +</a>
     <table class="table" style="width: 1000px;">
         <thead>
             <tr>
@@ -85,5 +63,6 @@
             ?>
         </tbody>
     </table>
-</body>
-</html>
+<?php
+    require "./common/footer.php";
+?>
