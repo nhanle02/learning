@@ -458,12 +458,23 @@
     margin-bottom: 45px;
 }
 
-.wrapper .box .box-right .item .list .product .img:hover {
-    transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
+.wrapper .box .box-right .item .list .product .img {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.wrapper .box .box-right .item .list .product .img img {
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.wrapper .box .box-right .item .list .product .img:hover img{
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 
 .wrapper .box .box-right .item .list .star-rating {
@@ -526,12 +537,23 @@
     margin-right: 30px;
 }
 
-.wrapper .box .box-right .item .wrap .wrap-left .product .img:hover {
-    transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
+.wrapper .box .box-right .item .wrap .wrap-left .product .img {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.wrapper .box .box-right .item .wrap .wrap-left .product .img img {
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.wrapper .box .box-right .item .wrap .wrap-left .product .img:hover img{
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 
 .wrapper .box .box-right .item .wrap .wrap-right {
@@ -549,12 +571,23 @@
     margin-right: 20px;
 }
 
-.wrapper .box .box-right .item .wrap .wrap-right .product .img:hover {
-    transform: scale(1.15);
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
+.wrapper .box .box-right .item .wrap .wrap-right .product .img {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.wrapper .box .box-right .item .wrap .wrap-right .product .img img {
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.wrapper .box .box-right .item .wrap .wrap-right .product .img:hover img{
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 
 .read {

@@ -33,4 +33,5 @@ $(function() {
       
       $('.list-item').slick();
       $('.list-image').slick();
+      $('.slick-item').slick();
 });
