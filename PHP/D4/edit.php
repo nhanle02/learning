@@ -24,7 +24,6 @@
                 $result = $stmt->fetchAll();
                 return $result;
             }
-
             $errors = [];
             if (isset($_POST['submit'])) {
                 $fullName = $_POST['full_name'];
@@ -46,16 +45,23 @@
                     $errors['email'] = 'Vui lòng nhập nhỏ hơn hoặc bằng 100 ký tự';
                 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $errors['email'] = 'Email chưa đúng định dạng';
-                } else if (isUniqueEmail($email)) {
+                } else if (isUniqueEmail($email) && $email != $user['email']) {
                     $errors['email'] = 'Email đã có người sử dụng';
                 }
-
                 if (empty($password)) {
-                    $errors['password'] = 'Mật khẩu là bắt buộc nhập';
+                    $errors['password'] = null;
                 } else if (strlen($password) > 32 || strlen($password) < 8) {
                     $errors['password'] = 'Vui lòng nhập mật khẩu từ 8 đến 32 ký tự';
                 } else if ($password !== $passwordConfirm) {
                     $errors['password_confirm'] = 'Xác nhận mật khẩu chưa khớp';
+                }
+                if (empty($phone)) {
+                    $errors['phone'] = 'Số điện thoại là bắt buộc nhập';
+                } else if (strlen($phone) > 11 || strlen($phone) < 10) {
+                    $errors['phone'] = 'Định dạng số điện thoại không đúng';
+                }
+                if (empty($address)) {
+                    $errors['address'] = 'bạn vui lòng nhập địa chỉ';
                 }
                 if ($avatar['error'] === 0) {
                     $types = [
@@ -63,15 +69,32 @@
                     ];
                     if (!in_array($avatar['type'], $types) ) {
                         $errors['avatar'] = 'File đã chọn chưa đúng định dạng';
-                    } else if ($avatar['size'] > 2048) {
+                    } else if ($avatar['size'] > 2048* 1000) {
                         $errors['avatar'] = 'Vui lòng chọn file không quá 2MB';
+                    } else if ($avatar['name'] ) {
+
                     }
                 }
-
+                // méo xử lý được cái update
                 if (empty($errors)) {
-                    // Xử lý update
+                    // if ($avatar['error'] === 0 && $avatar['name'] != $user[$avatar['name']]) { 
+                    //     $pathSave = '../../PHP/D4/uploads/' . $avatar['name'];
+                    //     move_uploaded_file($avatar['tmp_name'], $pathSave);
+                    // }
+                    // $fileName = $avatar['name'];
+                    // $password = password_hash($password, PASSWORD_BCRYPT);
+                    // $sql = "UPDATE `users` SET  full_name = ?, email =? , password = ?,
+                    // phone = ?, address = ?, status = ?, avatar = ? WHERE id = ?";
+                    // $stmt = $conn->prepare($sql);
+                    // $result = $stmt->execute([$fullName, $email, $password, $phone, $address, $status, $fileName]);
+                    // if (!empty($result)) {
+                    //     header('Location: index.php');
+                    // } else {
+                    //     echo 'Đã có lỗi trong quá trình sửa đổi thông tin';
+                    // }
                 }
             }
+            
         ?>
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
@@ -110,11 +133,17 @@
             <div class="form-group">
                 <label for="">Phone</label>
                 <input type="text" name="phone" value="<?php echo $phone ?? $user['phone'] ?>" class="form-control" />
+                <?php if (!empty($errors['phone'])) { ?>
+                    <span class="text-danger"><?php echo $errors['phone'] ?></span>
+                <?php } ?>
             </div>
 
             <div class="form-group">
                 <label for="">Address</label>
                 <input type="text" name="address" value="<?php echo $address ?? $user['address'] ?>" class="form-control" />
+                <?php if (!empty($errors['address'])) { ?>
+                    <span class="text-danger"><?php echo $errors['address'] ?></span>
+                <?php } ?>
             </div>
 
             <div class="form-group">
@@ -124,7 +153,7 @@
                     <span class="text-danger"><?php echo $errors['avatar'] ?></span>
                 <?php } ?>
                 <div class="preview-image">
-                    <img style="object-fit: contain;" width="200" height="200" src="../../PHP/D4/uploads/<? echo $user['avatar'] ?>" alt="" />
+                    <img style="object-fit: contain;" width="200" height="200" src="../../PHP/D4/uploads/<?php echo $user['avatar']?>" alt="" />
                 </div>
             </div>
 

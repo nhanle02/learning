@@ -46,6 +46,14 @@
                 } else if ($password !== $passwordConfirm) {
                     $errors['password_confirm'] = 'Xác nhận mật khẩu chưa khớp';
                 }
+                if (empty($phone)) {
+                    $errors['phone'] = 'Số điện thoại là bắt buộc nhập';
+                } else if (strlen($phone) > 11 || strlen($phone) < 10) {
+                    $errors['phone'] = 'Định dạng số điện thoại không đúng';
+                }
+                if (empty($address)) {
+                    $errors['address'] = 'bạn vui lòng nhập địa chỉ';
+                }
                 if ($avatar['error'] === 0) {
                     $types = [
                         'image/png', 'image/jpg', 'image/jepg',
@@ -114,11 +122,17 @@
             <div class="form-group">
                 <label for="">Phone</label>
                 <input type="text" name="phone" value="" class="form-control" />
+                <?php if (!empty($errors['phone'])) { ?>
+                    <span class="text-danger"><?php echo $errors['phone'] ?></span>
+                <?php } ?>
             </div>
 
             <div class="form-group">
                 <label for="">Address</label>
                 <input type="text" name="address" value="" class="form-control" />
+                <?php if (!empty($errors['address'])) { ?>
+                    <span class="text-danger"><?php echo $errors['address'] ?></span>
+                <?php } ?>
             </div>
 
             <div class="form-group">
