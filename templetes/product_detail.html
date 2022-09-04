@@ -4,20 +4,908 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick/slick-theme.css"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/product_detail.css">
-    <script src="./js/main.js"></script>
+    <script src="./js/jquery.js"></script>
     <title>Product detail</title>
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <div class="contact">
+            <div class="list-box">
+                <ul class="list-left">
+                    <li><i class="fas fa-envelope"></i>theme_sky@gmail.com</li>
+                    <li><i class="fas fa-phone-alt"></i></i>+84948419654</li>
+                </ul>
+                <ul class="list-right">
+                    <li><a href="./index.html">English</a></li>
+                    <li><a href="./index.html">USD</a></li>
+                    <li><a href="./index.html">wishlist</a></li>
+                    <li><a href="./index.html">Login /</a></li>
+                    <li><a href="./index.html"> Register</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo">
+            <div class="image"><a href="./index.html"><img src="./images/LOGO.png"/></a></div>
+            <div class="search">
+                <form class="form" action="" method="">
+                    <div class="box">
+                        <div class="item">
+                            <select class="option">
+                                <option>All categories</option>    
+                                <option>Váy</option>    
+                                <option>Giày dép</option>    
+                                <option>Áo</option>    
+                                <option>Quần</option>    
+                            </select>
+                        </div>
+                        <div class="item">
+                            <input class="search_pr" type="text" placeholder="Search for products">
+                            <button class="button" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="item">
+                            <div class="cart">
+                                <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+                                <span class="total">Cart: $0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="categories">
+            <div class="box">
+                <div class="item">
+                    <div class="menu js-click">
+                        <i class="fas fa-bars" ></i>
+                        <a class="text-menu" href="#" >SHOP BY CATEGORY</a>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="list-menu">
+                            <li><a href="./index.html">trang chu</a></li>
+                            <li><a href="./index.html">thong tin</a></li>
+                            <li><a href="./index.html">tin tuc</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="text" href="./index.html" >HOME</a>
+                </div>
+                <div class="item" >
+                    <a class="text" href="./index.html" >SHOP</a>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">quần</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="text" ./index.html >BLOG</a>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">áo</a>
+                        <a href="./index.html">váy</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="text" ./index.html >SHORTCODE</a>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">giày dép</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="text" href="./index.html" >PAGE</a>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">áo</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">quần</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="text" href="./index.html" >THEME FEATURES</a>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <div class="dropdown-content">
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                        <a href="./index.html">váy</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="text" href="./index.html" >CONTACTUS</a>
+                </div>
+            </div>
+        </div>
     </header>
     <section class="wrapper">
-        Product detail
+        <div class="home" style="background-image: url(./images/back.png); background-repeat: no-repeat; height: 400px;">
+            <div class="item">
+                <h2 class="title"><a href="./index.html">CRAS ISUM DEFAULT</a></h2>
+            </div>
+            <div class="list">
+                <div class="title"><a href="./index.html">Home</a></div>
+                <div class="signal">/</div>
+                <div class="title"><a href="./index.html">Shortcodes</a></div>
+                <div class="signal">/</div>
+                <div class="title"><a href="./index.html">Headers</a></div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="sub-wrap">
+                <div class="product_left">
+                    <div class="sub_img">
+                        <img src="./images/detail_product.png" alt="">
+                        <img src="./images/detail_product1.png" alt="">
+                        <img src="./images/detail_product2.png" alt="">
+                        <img src="./images/detail_product3.png" alt="">
+                    </div>
+                    <div class="slider slick_product">
+                        <div class="item">
+                            <img src="./images/product_detail.png" alt="">
+                        </div>
+                        <!-- <div class="item">
+                            <img src="./images/product_detail.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/product_detail.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/product_detail.png" alt="">
+                        </div> -->
+                    </div>
+                </div>
+                <div class="product_right">
+                    <div class="total">
+                        <h3>$20.99</h3>
+                    </div>
+                    <div class="view">
+                        <div class="status">
+                            <div class="sub-status">
+                                <i class="far fa-check-circle"></i>
+                                <span class="sub">IN STOCK</span>
+                            </div>
+                        </div>
+                        <div class="star-rating">  <!--  title="70%"-->
+                            <div class="back-stars">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <div class="front-stars">  <!--style="width: 70%;" -->
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <span class="count">7 Reviews</span>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <span class="sku">SKU:</span>
+                        <span class="code_product">01gon34</span>
+                    </div>
+                    <div class="text">
+                        <p class="description">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo maiorum intellegebat, liber regione eu sit. Mea cu case ludus integre, vide viderer eleifend ex mea. His at soluta regione diceret, cum et atqui placerat petentium.</p>
+                    </div>
+                    <div class="color">
+                        <div class="text">Choose Color:</div>
+                        <div class="list-color">
+                            <div class="item" style="background-color: #60c38f; width: 30px; height: 30px;"></div>
+                            <div class="item" style="background-color: #75d3e1; width: 30px; height: 30px;"></div>
+                            <div class="item" style="background-color: #f38083; width: 30px; height: 30px;"></div>
+                            <div class="item" style="background-color: #fbaf5d; width: 30px; height: 30px;"></div>
+                        </div>
+                    </div>
+                    <div class="size">
+                        <div class="text">Choose Size:</div>
+                        <select class="list-size" name="" id="">
+                            <option value="">Medium</option>
+                            <option value="">28</option>
+                            <option value="">29</option>
+                            <option value="">30</option>
+                            <option value="">31</option>
+                            <option value="">32</option>
+                            <option value="">33</option>
+                        </select>
+                    </div>
+                    <div class="general">
+                        <div class="form">
+                            <form action="" method="GET">
+                                <div class="amount">
+                                    <input class="text" type="text" value="1" name="count">
+                                    <div class="aperator">
+                                        <span class="plus"  value="+" >+</span>
+                                        <span class="minus" value="-" >-</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cart">
+                            <div class="icon-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="text">
+                                <span class="add-cart">ADD TO CART</span>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-retweet"></i>
+                        </div>
+                    </div>
+                    <div class="text-top">
+                        <span class="text-left">Categories:</span>
+                        <span class="text-right">Bags, Accessories</span>
+                    </div>
+                    <div class="text-bottom">
+                        <span class="text-left">Tags:</span>
+                        <span class="text-right">Blue, Travel, Girl</span>
+                    </div>
+                    <div class="wrap">
+                        <div class="print">
+                            <i class="fas fa-print"></i>
+                            <span class="text-print">Print</span>
+                        </div>
+                        <div class="email">
+                            <i class="far fa-envelope"></i>
+                            <span class="text-email">Email to a Friend</span>
+                        </div>
+                        <div class="icon">
+                            <a href="./index.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="./index.html"><i class="fab fa-twitter"></i></a>
+                            <a href="./index.html"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="./index.html"><i class="fab fa-pinterest"></i></a>
+                            <a href="./index.html"><i class="fab fa-youtube"></i></a>
+                            <a href="./index.html"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <ul class="list-tab">
+                <li>DESCRIPTION</li>
+                <li>ADDITIONAL INFORMATION</li>
+                <li>REVIEWS (0)</li>
+            </ul>
+            <div class="tab-content">
+                <div class="box">
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nibh ligula, faucibus et aliquet ac molestie a massa. Fusce vitae fausiat enim , id fermentum magna Achean convallista massa ac rhoncus. Integer iaculis et erat id auctor. Vivamus porta , mi a porttitor imperdiet , purus metus tempus elit, ut dictum mee is dul a telks. Integer at ipsum sit amet vulputaticles in vel orci. Aliquam fugiat vulputate ligula , quis posuere tortor condimentum eget . Sed consequat ante sed congue peileitue . Cras maa purus venenatis in eros at , vestibulum sodales facilisis tortor , sit amet scelerisque metus pharetra at . Proin efficitur consegatipsum scelerisque. Quisque ac venenatis purus. sapien. Nu</p>
+                    <div class="img">
+                        <img src="./images/anh10.png" alt="">
+                    </div>
+                </div>
+                <div class="box list">
+                    <div class="gender">
+                        <div class="item">SKU</div>
+                        <div class="item">Color</div>
+                        <div class="item">Size</div>
+                        <div class="item">Weight</div>
+                        <div class="item">Height</div>
+                        <div class="item">Over view</div>
+                        <div class="item">Data sheet</div>
+                        <div class="item">Dimensions</div>
+                    </div>
+                    <div class="description">
+                        <div class="item">01gon34</div>
+                        <div class="item">Blue</div>
+                        <div class="item">Small, medium, large, X-large</div>
+                        <div class="item">Vestibulum tincidunt est quis </div>
+                        <div class="item">Lorem maximus</div>
+                        <div class="item">Quisque eu lacus enim</div>
+                        <div class="item">Nemo enim ipsam perspiciatis</div>
+                        <div class="item">Vestibulum tincidunt est quis lorem maximus</div>
+                    </div>
+                </div>
+                <div class="box view">
+                    <div class="box-left">
+                        <div class="item">
+                            <div class="image-user">
+                                <img src="./images/users.png" alt="">
+                            </div>
+                            <div class="review">
+                                <div class="users">
+                                    <h3 class="users-name">John Doe</h3>
+                                    <div class="day">
+                                        <div class="day-month">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span class="day-month-year">July 27, 2015</span>
+                                        </div>
+                                        <div class="star-rating">  <!--  title="70%"-->
+                                            <div class="back-stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                
+                                                <div class="front-stars">  <!--style="width: 70%;" -->
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo malorum intellegebat, liber regione eusit. Meacu case ludus integre, vide viderer eleifend ex mea.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image-user">
+                                <img src="./images/users.png" alt="">
+                            </div>
+                            <div class="review">
+                                <div class="users">
+                                    <h3 class="users-name">John Doe</h3>
+                                    <div class="day">
+                                        <div class="day-month">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span class="day-month-year">July 27, 2015</span>
+                                        </div>
+                                        <div class="star-rating">  <!--  title="70%"-->
+                                            <div class="back-stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                
+                                                <div class="front-stars">  <!--style="width: 70%;" -->
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo malorum intellegebat, liber regione eusit. Meacu case ludus integre, vide viderer eleifend ex mea.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image-user">
+                                <img src="./images/users.png" alt="">
+                            </div>
+                            <div class="review">
+                                <div class="users">
+                                    <h3 class="users-name">John Doe</h3>
+                                    <div class="day">
+                                        <div class="day-month">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span class="day-month-year">July 27, 2015</span>
+                                        </div>
+                                        <div class="star-rating">  <!--  title="70%"-->
+                                            <div class="back-stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                
+                                                <div class="front-stars">  <!--style="width: 70%;" -->
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo malorum intellegebat, liber regione eusit. Meacu case ludus integre, vide viderer eleifend ex mea.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image-user">
+                                <img src="./images/users.png" alt="">
+                            </div>
+                            <div class="review">
+                                <div class="users">
+                                    <h3 class="users-name">John Doe</h3>
+                                    <div class="day">
+                                        <div class="day-month">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span class="day-month-year">July 27, 2015</span>
+                                        </div>
+                                        <div class="star-rating">  <!--  title="70%"-->
+                                            <div class="back-stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                
+                                                <div class="front-stars">  <!--style="width: 70%;" -->
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text">Lorem ipsum dolor sit amet, feugiat delicata liberavisse id cum, no quo malorum intellegebat, liber regione eusit. Meacu case ludus integre, vide viderer eleifend ex mea.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-right">
+                        <h3 class="title">ADD A REVIEW</h3>
+                        <div class="evaluate">
+                            <span class="text">Your Rating:</span>
+                            <span class="star">*</span>
+                        </div>
+                        <div class="stars">
+                            <div class="item">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <form class="form" action="" method="POST">
+                            <div class="item">
+                                <div class="evaluate">
+                                    <span class="text">Your Name</span>
+                                    <span class="star">*</span>
+                                </div>
+                                <input class="name" type="text" name="name" id="name">
+                            </div>
+                            <div class="item">
+                                <div class="evaluate">
+                                    <span class="text">Email Address</span>
+                                    <span class="star">*</span>
+                                </div>
+                                <input class="email" type="text" name="email" id="name">
+                            </div>
+                            <div class="item">
+                                <div class="evaluate">
+                                    <span class="text">Comment</span>
+                                    <span class="star">*</span>
+                                </div>
+                                <textarea class="comment" name="comment" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="item">
+                                <input class="submit" type="submit" name="submit" value="SUBMIT">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="item" style="background-image: url(./images/anh1-2.png); width: 390px; height: 120px;">
+                <i class="fas fa-truck"></i>
+                <div class="title">
+                    <div class="sub-title">
+                        <h3 class="title-left">FREE</h3>
+                        <h3 class="title-right">Shipping</h3>
+                    </div> 
+                    <div class="text-bottom">
+                        <span>On all orders over $50.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./images/anh2-2.png); width: 390px; height: 120px;">
+                <i class="fas fa-hand-holding-usd"></i>
+                <div class="title">
+                    <div class="sub-title">
+                        <h3 class="title-left">FREE</h3>
+                        <h3 class="title-right">Return</h3>
+                    </div> 
+                    <div class="text">
+                        <span>Only for all orders over $100.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./images/anh3-2.png); width: 390px; height: 120px;">
+                <i class="far fa-smile"></i>
+                <div class="title">
+                    <div class="sub-title">
+                        <h3 class="title-left">FREE</h3>
+                        <h3 class="title-right">Support</h3>
+                    </div> 
+                    <div class="text">
+                        <span>24/7 from Monday to Friday</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-slick">
+            <h3 class="title">products 5 columns</h3>
+            <div class="slider slick-item" >
+				<div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+                <div class="item">
+                    <div class="wrap">
+                        <div class="product">
+                            <div class="img">
+                                <img id="img" src="./images/anh-product.png">
+                            </div>
+                            <div class="text">
+                                <div class="sub-title"><h4><a class="product-item" href="./index.html">T-SHIRT</a></h4></div>
+                                <div class="sub-text">
+                                    <span id="text">Cras ipsum massa</span>
+                                </div>
+                                <div class="cash"><span id="cash">$20.99</span></div>
+                                <div class="star-rating">  <!--  title="70%"-->
+                                    <div class="back-stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        
+                                        <div class="front-stars">  <!--style="width: 70%;" -->
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+				</div> 
+			</div>
+        </div>
     </section>
-    <footer>
-
+    <footer class="footer">
+        <div class="wrap">
+            <div class="item">
+                <h3>ABOUT US</h3>
+                <div class="contact"><span>Office: </span><span>868 Fake Street, New York</span></div>
+                <div class="contact"><span>Phone: </span><span>(08) 8827 633354</span></div>
+                <div class="contact"><span>Fax: </span><span>(08) 8827 633354</span></div>
+                <div class="contact"><span>Email: </span><span>info@theme-sky.com</span></div>
+                <div class="icon">
+                    <a href="./index.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./index.html"></a><i class="fab fa-twitter"></i></a>
+                    <a href="./index.html"></a><i class="fab fa-google-plus-g"></i></a>
+                    <a href="./index.html"></a><i class="fab fa-pinterest"></i></a>        
+                    <a href="./index.html"></a><i class="fab fa-youtube"></i></a>
+                    <a href="./index.html"></a><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>INFORMATION</h3>
+                <div class="link">
+                    <a href="./index.html">Frequently Asked Questions</a>
+                    <a href="./index.html">Terms and Conditions</a>
+                    <a href="./index.html">Privacy Policy</a>
+                    <a href="./index.html">Terms & Conditions</a>
+                    <a href="./index.html">Customer Service</a>
+                    <a href="./index.html">Delivery Information</a>
+                    <a href="./index.html">Manufacturers</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>RENCENT POSTS</h3>
+                <div class="box">
+                    <div class="box-left">
+                        <p class="text-top">19</p>
+                        <p class="text-button">JUNE</p>
+                    </div>
+                    <div class="box-right">
+                        <a href="./index.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-left">
+                        <p class="text-top">19</p>
+                        <p class="text-button">JUNE</p>
+                    </div>
+                    <div class="box-right">
+                        <a href="./index.html">Ut wisi enim ad minim veniam nibh euismod tincidunt ut laoreet dolore magna</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h3>FLICKR</h3>
+                <div class="img2">
+                    <img src="./images/1_original.png" />
+                    <img src="./images/2_original.png" />
+                    <img src="./images/3_original.png" />
+                    <img src="./images/4_original.png" />
+                    <img src="./images/5_original.png" />
+                    <img src="./images/6_original.png" />
+                </div>
+            </div>
+        </div>
+        <div class="logo"><a href="./index.html"><img src="./images/LOGO.png"/></a></div>  
+        <div class="Topic">
+            <p>© 2015 Gonshop. All Rights Reserved. Theme by theme-sky.com</p>
+        </div>
+        <div class="icon-footer">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-discover"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+        </div>
     </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/product_detail.js"></script>
+    <script type="text/javascript" src="./css/slick/slick.min.js"></script>
 </body>
 </html>
