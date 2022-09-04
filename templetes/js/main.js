@@ -33,5 +33,10 @@ $(function() {
       
       $('.list-item').slick();
       $('.list-image').slick();
-      $('.slick-item').slick();
+      // $('.slick_product').slick();
+      $('.slick-item').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 5,
+        slidesToScroll: 1
+      });
 });
