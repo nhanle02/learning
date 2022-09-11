@@ -45,15 +45,15 @@
                     $errors['email'] = 'Vui lòng nhập nhỏ hơn hoặc bằng 100 ký tự';
                 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $errors['email'] = 'Email chưa đúng định dạng';
-                } else if (isUniqueEmail($email) && $email != $user['email']) {
+                } else if (isUniqueEmail($email) && $email !== $user['email']) {
                     $errors['email'] = 'Email đã có người sử dụng';
                 }
-                if (empty($password)) {
-                    $errors['password'] = null;
-                } else if (strlen($password) > 32 || strlen($password) < 8) {
-                    $errors['password'] = 'Vui lòng nhập mật khẩu từ 8 đến 32 ký tự';
-                } else if ($password !== $passwordConfirm) {
-                    $errors['password_confirm'] = 'Xác nhận mật khẩu chưa khớp';
+                if (!empty($password)) {
+                    if (strlen($password) > 32 || strlen($password) < 8) {
+                        $errors['password'] = 'Vui lòng nhập mật khẩu từ 8 đến 32 ký tự';
+                    } else if ($password !== $passwordConfirm) {
+                        $errors['password_confirm'] = 'Xác nhận mật khẩu chưa khớp';
+                    }
                 }
                 if (empty($phone)) {
                     $errors['phone'] = 'Số điện thoại là bắt buộc nhập';
@@ -77,21 +77,25 @@
                 }
                 // méo xử lý được cái update
                 if (empty($errors)) {
-                    // if ($avatar['error'] === 0 && $avatar['name'] != $user[$avatar['name']]) { 
-                    //     $pathSave = '../../PHP/D4/uploads/' . $avatar['name'];
-                    //     move_uploaded_file($avatar['tmp_name'], $pathSave);
-                    // }
-                    // $fileName = $avatar['name'];
-                    // $password = password_hash($password, PASSWORD_BCRYPT);
-                    // $sql = "UPDATE `users` SET  full_name = ?, email =? , password = ?,
-                    // phone = ?, address = ?, status = ?, avatar = ? WHERE id = ?";
-                    // $stmt = $conn->prepare($sql);
-                    // $result = $stmt->execute([$fullName, $email, $password, $phone, $address, $status, $fileName]);
-                    // if (!empty($result)) {
-                    //     header('Location: index.php');
-                    // } else {
-                    //     echo 'Đã có lỗi trong quá trình sửa đổi thông tin';
-                    // }
+                    if ($avatar['error'] === 0 ) { 
+                        $oldAvatar = '../../PHP/D4/uploads/' . $user['avatar'];
+                        $pathSave = '../../PHP/D4/uploads/' . $avatar['name'];
+                        move_uploaded_file($avatar['tmp_name'], $pathSave);
+                        if(file_exists($oldAvatar)) {
+                            unlink($oldAvatar);
+                        }
+                    } 
+                    $fileName = !empty($avatar['name']) ? $avatar['name'] : $user['avatar'];
+                    $password = password_hash($password, PASSWORD_BCRYPT);
+                    $sql = "UPDATE users SET  full_name = '$fullName', email = '$email' , password = '$password',
+                    phone = '$phone', address = '$address', status = '$status', avatar = '$fileName' WHERE id = ?";
+                    $stmt = $conn->prepare($sql);
+                    $result = $stmt->execute([$_GET['id']]);
+                    if (!empty($result)) {
+                        header('Location: index.php');
+                    } else {
+                        echo 'Đã có lỗi trong quá trình sửa đổi thông tin';
+                    }
                 }
             }
             

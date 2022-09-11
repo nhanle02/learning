@@ -20,6 +20,7 @@
             // echo print_r($results, true);
             // echo '</pre>'
         ?>
+                
         <a href="create.php" class="btn btn-success mb-1">Create +</a>
         <table class="table" style="width: 1000px;">
             <thead>
@@ -53,16 +54,32 @@
                                 echo $status;
                             ?>
                         </td>
-                        <td>
+                        <td class="box">
                             <a href="edit.php?id=<?php echo $result['id'] ?>" class="btn btn-info">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="javascript:void(0)" class="delete btn btn-danger">Delete</a>
+                            <form action="delete_users.php" class="d-none js-form" method="POST">
+                                <input type="text" name="id" value="<?php echo $result['id'] ?>">
+                                <input type="submit" name="submit" class="submit">
+                            </form>
                         </td>
                     </tr>
                 <?php 
                     }
                 } 
                 ?>
+                
             </tbody>
+            <script>
+                $(function(){
+                    $('.delete').click(function(){
+                        if(confirm("bạn có chắc chắn muôn xóa không?")) {
+                            $(this).closest('.box').find('.js-form .submit').click();
+                        } else {
+                            return false;
+                        }
+                    });
+                });
+            </script>
         </table>
     </div>
 <?php
