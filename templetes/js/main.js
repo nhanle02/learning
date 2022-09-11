@@ -33,4 +33,8 @@ $(function() {
       
       $('.list-item').slick();
       $('.list-image').slick();
+      $('.article').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      });
 });
